@@ -2,19 +2,19 @@
 <head>
 
 <title>Closember 2022 by Quansight</title>
-<meta name="description" content="Closember aims to increase awareness about Open Source maintainer burnout and promote practices to make maintaining open-source less stressful and more enjoyable for everyone.">
+<meta name="description" content="Closember aims to increase awareness about Open Source maintainer burnout, and promote practices to make maintaining open source less stressful and more enjoyable for everyone.">
 
 <!-- Facebook Meta Tags -->
 <meta property="og:title" content="Closember 2022 by Quansight">
 <meta property="og:image" content="https://closember.org/assets/Closember_OG.png">
-<meta property="og:description" content="Closember aims to increase awareness about Open Source maintainer burnout and promote practices to make maintaining open-source less stressful and more enjoyable for everyone.">
+<meta property="og:description" content="Closember aims to increase awareness about Open Source maintainer burnout, and promote practices to make maintaining open source less stressful and more enjoyable for everyone.">
 <meta property="og:url" content="https://closember.org">
 
 <meta name="twitter:card" content="summary_large_image" >
 <meta name="twitter:title" content="Closember 2022 by Quansight">
 <meta property="twitter:domain" content="closember.org">
 <meta property="twitter:url" content="https://closember.org">
-<meta name="twitter:description" content="Closember aims to increase awareness about Open Source maintainer burnout and promote practices to make maintaining open-source less stressful and more enjoyable for everyone.">
+<meta name="twitter:description" content="Closember aims to increase awareness about Open Source maintainer burnout, and promote practices to make maintaining open source less stressful and more enjoyable for everyone.">
 <meta name="twitter:image" content="https://closember.org/assets/Closember_OG.png">
 
 
@@ -56,9 +56,9 @@
    <div id='hero'>
    {{svg|safe}}
    </div>
-    <p>Closember 2022 is coming up fast! Counters are back to zero and we'll again track who closed the most issues. Your
-    help is welcomed ! Please come contribute to the <a
-    href="https://github.com/openteamsinc/closember/issues">closember repo</a>. Follow <a
+    <p>Closember 2022 is coming up fast! We've reset the counters to zero and we'll track who closed the most issues again this year.</p>
+    <p>We would welcome your help! Please come contribute to the <a
+    href="https://github.com/openteamsinc/closember/issues">closember repo</a>, follow <a
     href='https://twitter.com/ClosemberDev'>@ClosemberDev</a>, and use the <a
     href='https://twitter.com/hashtag/closember'>#closember</a> hashtag. </p>
  {% endif %}
