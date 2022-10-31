@@ -124,6 +124,7 @@ a.sg {
     padding: 10px;
     border-radius: 10px;
     transition: all 1.5s ease;
+    font-size: smaller;
 }
 a.sg > img {
     transition: all 1.5s ease;
@@ -214,7 +215,7 @@ blockquote {
     margin: 1em 20em 2em 2.5em;
     padding: 1em 2em 1em 2em;
     text-align: left;
-    background-color: #ffe6dc;
+    background-color: #fff5f1;
     border-left: 2px solid #593324;
 }
 
@@ -254,6 +255,17 @@ div.back-to-top {
     margin-bottom: 3em;
 }
 
+div.sponsor-table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+div.sponsor-table img {
+    margin: 0 1.5em;
+}
+
 div#closed-sign {
     background-color: #7a95c5;
     border-radius: 15px;
@@ -277,6 +289,29 @@ div#closed-sign {
 }
 div#closed-sign:hover {
     background-color: #e0665d;
+}
+
+/* These next two incantations make the utteranc.es content render
+    with a non-zero height.
+
+    From: https://stackoverflow.com/a/23866014/4376000
+*/
+
+div.utterances {
+    position: relative;
+    height: 0;
+    width: 100%;
+    padding-bottom: 56.25%;
+}
+
+iframe.utterances-frame {
+    position: absolute;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    width: 100%;
+    height: 100%;
 }
 
 .title {
@@ -316,7 +351,8 @@ div#closed-sign:hover {
 
 .footer {
     background-color: #f4f5f6;
-    padding: 3rem;
+    padding: 3rem 3rem 0.1rem 3rem;
+    font-size: 0.65em;
 }
 
 .frame {
@@ -1580,10 +1616,10 @@ frame.img {
       All right, maintainers—so you have a project that could use some maintainability help, and you’d like to get in on the Closember action. What should you do to get ready?
     </p>
     <p>
-      Well, first of all, keep in mind that the most basic point of Closember is maintainer health and well-being. So, take care of yourself first, whatever that means ... diet, exercise, sleep, relaxation ... only you know what you need. Another thing to consider is that working with Closember contributions <em>will</em> involve extra time and effort on your part. So, even if your project could use some help, the best thing for you <em>might</em> be not to participate!
+      Well, first of all, keep in mind that the most fundamental point of Closember is maintainer health and well-being. So, take care of yourself first, whatever that means ... diet, exercise, sleep, relaxation ... only you know what you need. Another thing to consider is that working with Closember contributions <em>will</em> involve extra time and effort on your part. So, even if your project could use some help, the best thing for you <em>might</em> be not to participate!
     </p>
     <p>
-      If you decide to jump in, though, the biggest thing you need to do before tagging your repo with <code>closember</code> is to decide what kind of help you want: triaging, infrastructure, automation, project restructuring/refactoring…. There are lots of possibilities! Take stock of your project and identify one or two (or more!) areas where it would most benefit from some maintenance help.
+      If you decide to jump in, though, the biggest thing you need to do before tagging your repo with <code>closember</code> is to decide what kind of help you want:  triaging, infrastructure, refactoring, copy/design, translation, accessibility.... There are lots of possibilities! Take stock of your project and identify one or two (or more!) areas where it would most benefit from some maintenance help.
     </p>
     <p>
       Then, edit your README to let Closember visitors know what sort of help you’re looking for, tag your repo with <code>closember</code>, and engage with the community as they come by! You could even take some extra time and triage/close a few issues or PRs yourself, if the mood strikes.
@@ -1599,7 +1635,7 @@ frame.img {
       As we’ve described above, Closember is mainly about the health of open source maintainers and projects. So, while we’ve defined some Closember success metrics for ourselves, these metrics aren’t the be-all and end-all. Each open source community and project can have its own goals and metrics, which fit its size, philosophy, etc.—part of the fun and purpose of Closember is the discussion around what it means for a community to be ‘healthy.’ For example, you have to be aware of the possibility for ‘<a href="https://en.wikipedia.org/wiki/Normalization_of_deviance" target="_blank">normalization of deviance</a>’, where even though a practice is accepted, it’s still unhealthy.
     </p>
     <p>
-      The metrics we’re calculating here are focused on closing old issues and PRs, since that’s something that’s pretty easy to quantify. Again, there are no objectively good or bad metrics—these are just the ones we’ve chosen to present. Our metrics are calculated for each participating repository, and are:
+      The metrics we’re calculating here are focused on closing old issues and PRs, since that’s something that’s pretty easy to quantify. Again, there are no objectively good or bad metrics—these are merely the ones we’ve chosen to present. Our metrics are calculated for each participating repository, and are:
     </p>
     <ol>
       <li>Total issues closed during Closember, which were opened before Closember</li>
@@ -1615,7 +1651,7 @@ frame.img {
       To the numbers!
     </p>
     <p>
-      Overall, of the <span class="gray-glow">13082</span> issues and PRs open as of the start of Closember, <span class="green-glow">0</span> have been closed and <span class="red-glow">13082</span> are still open.
+      Overall, of the <span class="gray-glow">13086</span> issues and PRs open as of the start of Closember, <span class="green-glow">0</span> have been closed and <span class="red-glow">13086</span> are still open.
     </p>
 
     <h3 id="closed-issues-prs">Closed Issues/PRs</h3>
@@ -2168,23 +2204,23 @@ frame.img {
       
         <tr>
           <td>8 </td>
-          <td><a href='https://github.com/openteamsinc/closember'>openteamsinc/closember<a></td>
-          <td class='red-glow'>11</td>
-          <td class='red-glow'>0</td>
-        </tr>
-      
-        <tr>
-          <td>9 </td>
           <td><a href='https://github.com/pytroll/pygac-fdr'>pytroll/pygac-fdr<a></td>
           <td class='red-glow'>9</td>
           <td class='red-glow'>2</td>
         </tr>
       
         <tr>
-          <td>10 </td>
+          <td>9 </td>
           <td><a href='https://github.com/datalad/datalad-ebrains'>datalad/datalad-ebrains<a></td>
           <td class='red-glow'>10</td>
           <td class='red-glow'>2</td>
+        </tr>
+      
+        <tr>
+          <td>10 </td>
+          <td><a href='https://github.com/openteamsinc/closember'>openteamsinc/closember<a></td>
+          <td class='red-glow'>11</td>
+          <td class='red-glow'>1</td>
         </tr>
       
         <tr>
@@ -2471,7 +2507,7 @@ frame.img {
           <td>51 </td>
           <td><a href='https://github.com/pymc-devs/pymc-examples'>pymc-devs/pymc-examples<a></td>
           <td class='red-glow'>111</td>
-          <td class='red-glow'>16</td>
+          <td class='red-glow'>17</td>
         </tr>
       
         <tr>
@@ -2541,7 +2577,7 @@ frame.img {
           <td>61 </td>
           <td><a href='https://github.com/datalad/datalad'>datalad/datalad<a></td>
           <td class='red-glow'>550</td>
-          <td class='red-glow'>13</td>
+          <td class='red-glow'>14</td>
         </tr>
       
         <tr>
@@ -2561,7 +2597,7 @@ frame.img {
         <tr>
           <td>64 </td>
           <td><a href='https://github.com/spyder-ide/spyder'>spyder-ide/spyder<a></td>
-          <td class='red-glow'>1101</td>
+          <td class='red-glow'>1102</td>
           <td class='red-glow'>62</td>
         </tr>
       
@@ -2617,15 +2653,167 @@ frame.img {
           <td>&ndash;</td>
         </tr>
       
-      </table>
+    </table>
+
+    <h2 id="show-your-support">Show Your Support</h2>
+
+    <p>
+      In addition to engaging with your favorite open source projects, support Closember by starring our <a href="https://github.com/openteamsinc/closember" target="_blank">repo</a>! Right now we have 54 Github stargazers:
+    </p>
+
+    <div class='avatar-container'>
+      
+        <a class='sg' href="https://github.com/JPTIZ"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/11988816?u=fe327ecc98f72684e37762cb377208318f784c05&amp;v=4&amp;s=50" /><div>JPTIZ</div></a>
+      
+        <a class='sg' href="https://github.com/hearot"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/32136919?u=31fe36b26476c11bc9a9494f9e8435cfc91e7a86&amp;v=4&amp;s=50" /><div>hearot</div></a>
+      
+        <a class='sg' href="https://github.com/hameerabbasi"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/2190658?u=b85e13f985d0bf87eeb3a7a146b61dcc9586019b&amp;v=4&amp;s=50" /><div>hameerabbasi</div></a>
+      
+        <a class='sg' href="https://github.com/diefans"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/513316?u=eb4b82acc2d3ea05b9be93b6bd7126d02569b4b8&amp;v=4&amp;s=50" /><div>diefans</div></a>
+      
+        <a class='sg' href="https://github.com/Carreau"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/335567?v=4&amp;s=50" /><div>Carreau</div></a>
+      
+        <a class='sg' href="https://github.com/ericdatakelly"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/24855669?u=87a2c7f3bc01ac97ff462203cefa648d226a2520&amp;v=4&amp;s=50" /><div>ericdatakelly</div></a>
+      
+        <a class='sg' href="https://github.com/willmcgugan"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/554369?u=8015a7d742d8bd7ee9d1efe30c138737d6098cd3&amp;v=4&amp;s=50" /><div>willmcgugan</div></a>
+      
+        <a class='sg' href="https://github.com/astrojuanlu"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/316517?u=6bd68bdde58b9c4bc9e06c26cc231175059a7aea&amp;v=4&amp;s=50" /><div>astrojuanlu</div></a>
+      
+        <a class='sg' href="https://github.com/jefftriplett"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/50527?u=af1ddfd50f6afd6d99f333ba2ac8d0a5b245ea74&amp;v=4&amp;s=50" /><div>jefftriplett</div></a>
+      
+        <a class='sg' href="https://github.com/timofurrer"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/1008252?u=2bde4396f4cb650b73de9e86c7608f5b7eac24a8&amp;v=4&amp;s=50" /><div>timofurrer</div></a>
+      
+        <a class='sg' href="https://github.com/ENM1989"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/2657224?u=4ae4b30abb1d80a0ca596c71e6b5d3c446dc575e&amp;v=4&amp;s=50" /><div>ENM1989</div></a>
+      
+        <a class='sg' href="https://github.com/neutrinoceros"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/14075922?v=4&amp;s=50" /><div>neutrinoceros</div></a>
+      
+        <a class='sg' href="https://github.com/czgdp1807"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/36567889?u=832d7c5373f0e02f2b2398cfe784cebbb0471576&amp;v=4&amp;s=50" /><div>czgdp1807</div></a>
+      
+        <a class='sg' href="https://github.com/pratikgl"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/43725022?u=8d8f15e1dedc2f7395877d459c8bcaaaea62d7b0&amp;v=4&amp;s=50" /><div>pratikgl</div></a>
+      
+        <a class='sg' href="https://github.com/thelittlebug"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/2874956?u=9f07175318c9d3d04b52fb57bfb6df46b159e690&amp;v=4&amp;s=50" /><div>thelittlebug</div></a>
+      
+        <a class='sg' href="https://github.com/toonarmycaptain"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/29956894?v=4&amp;s=50" /><div>toonarmycaptain</div></a>
+      
+        <a class='sg' href="https://github.com/Jordan-Cottle"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/37338122?u=8e146a4f6aafdc38211d2c80e61870de5ab6de0b&amp;v=4&amp;s=50" /><div>Jordan-Cottle</div></a>
+      
+        <a class='sg' href="https://github.com/joshuacwnewton"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/16181459?u=74cc00fc4f98c447d71b9d918f1a416c03db1a7e&amp;v=4&amp;s=50" /><div>joshuacwnewton</div></a>
+      
+        <a class='sg' href="https://github.com/dalthviz"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/16781833?u=f11fabb4382b63e96428df6a7fb89bd907d45133&amp;v=4&amp;s=50" /><div>dalthviz</div></a>
+      
+        <a class='sg' href="https://github.com/ayharano"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/13336?u=c6c35b212309fef458dcd0dc4d4d48cfd39171f5&amp;v=4&amp;s=50" /><div>ayharano</div></a>
+      
+        <a class='sg' href="https://github.com/luizirber"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/6642?u=5ec9e951dd3510a1a124750f786cfa245aab30e4&amp;v=4&amp;s=50" /><div>luizirber</div></a>
+      
+        <a class='sg' href="https://github.com/SaranjeetKaur"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/28556616?v=4&amp;s=50" /><div>SaranjeetKaur</div></a>
+      
+        <a class='sg' href="https://github.com/InessaPawson"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/43481325?u=8c0c0adbf3f2efd2cce72951d3554064c7bbfce3&amp;v=4&amp;s=50" /><div>InessaPawson</div></a>
+      
+        <a class='sg' href="https://github.com/mih"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/136479?u=c458067f070d983fd3df2c58630ee9236b75f2e5&amp;v=4&amp;s=50" /><div>mih</div></a>
+      
+        <a class='sg' href="https://github.com/smoia"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/35300580?u=86d2ef3ab1e7206daceefaddbe270777553ad77b&amp;v=4&amp;s=50" /><div>smoia</div></a>
+      
+        <a class='sg' href="https://github.com/bsipocz"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/6788290?u=d9a388224b87d55106cb3e6199d02ebc1d8e0553&amp;v=4&amp;s=50" /><div>bsipocz</div></a>
+      
+        <a class='sg' href="https://github.com/mwcraig"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/1147167?v=4&amp;s=50" /><div>mwcraig</div></a>
+      
+        <a class='sg' href="https://github.com/adswa"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/29738718?u=0ca52796d2273e4a0019d0b88dfd01c025782c9d&amp;v=4&amp;s=50" /><div>adswa</div></a>
+      
+        <a class='sg' href="https://github.com/dcherian"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/2448579?u=5e0d7443f68017a6946a79185ed94e3dfe032517&amp;v=4&amp;s=50" /><div>dcherian</div></a>
+      
+        <a class='sg' href="https://github.com/yarikoptic"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/39889?u=bd28816c18beaddc4da762d61d842547fdb271d9&amp;v=4&amp;s=50" /><div>yarikoptic</div></a>
+      
+        <a class='sg' href="https://github.com/mvdoc"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/6150554?u=ca803c0bace95340373e28e6b8eddc6ccd0a7caa&amp;v=4&amp;s=50" /><div>mvdoc</div></a>
+      
+        <a class='sg' href="https://github.com/yochannah"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/9271438?u=67212f487f50781b0ae81ebdb05ee0fefa4ae2e1&amp;v=4&amp;s=50" /><div>yochannah</div></a>
+      
+        <a class='sg' href="https://github.com/Remi-Gau"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/6961185?u=52aef81722a11b6512facf23be04ad48665165f3&amp;v=4&amp;s=50" /><div>Remi-Gau</div></a>
+      
+        <a class='sg' href="https://github.com/jadecci"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/14807815?u=d56be2817c5d712b4f46d168929b9e98d0dbdb6f&amp;v=4&amp;s=50" /><div>jadecci</div></a>
+      
+        <a class='sg' href="https://github.com/djhoese"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/1828519?u=d3fc31833341445738decb83f5901216b3aa7eda&amp;v=4&amp;s=50" /><div>djhoese</div></a>
+      
+        <a class='sg' href="https://github.com/OriolAbril"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/23738400?u=e12583539a9f95064bc8559c0669a2f00906bb41&amp;v=4&amp;s=50" /><div>OriolAbril</div></a>
+      
+        <a class='sg' href="https://github.com/JessicaS11"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/11756442?u=1892160f86980b5476cccf29a8cfb23734f8e57f&amp;v=4&amp;s=50" /><div>JessicaS11</div></a>
+      
+        <a class='sg' href="https://github.com/martinacantaro"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/6120897?u=7f9b17a3c7c19c1ebf0a0592674e3329ff823bc4&amp;v=4&amp;s=50" /><div>martinacantaro</div></a>
+      
+        <a class='sg' href="https://github.com/cmarmo"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/1662261?u=9f4dd33bc0960a68f257fbb159dfea792f6d3635&amp;v=4&amp;s=50" /><div>cmarmo</div></a>
+      
+        <a class='sg' href="https://github.com/francoisgoupil"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/98105626?u=f28e64da2cffc63d01c3c1c6029665664d2ceaa5&amp;v=4&amp;s=50" /><div>francoisgoupil</div></a>
+      
+        <a class='sg' href="https://github.com/Vincent-Maladiere"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/18560386?u=fa3384f926475fe2b64d1ab645c8688da76f4539&amp;v=4&amp;s=50" /><div>Vincent-Maladiere</div></a>
+      
+        <a class='sg' href="https://github.com/hturner"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/3343008?u=2edc6277c358b43898a00d005c77d76d7067ef56&amp;v=4&amp;s=50" /><div>hturner</div></a>
+      
+        <a class='sg' href="https://github.com/bmcfee"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/1190540?u=19b0b909f691178424a2cb69f379be4acdb16b42&amp;v=4&amp;s=50" /><div>bmcfee</div></a>
+      
+        <a class='sg' href="https://github.com/jackdeadman"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/6359535?u=d73943d0c082ec0ea59677989076beed0ebd9a12&amp;v=4&amp;s=50" /><div>jackdeadman</div></a>
+      
+        <a class='sg' href="https://github.com/tupui"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/23188539?u=64445b52dbf3f75de8006ed4264fdd2afaed97a3&amp;v=4&amp;s=50" /><div>tupui</div></a>
+      
+        <a class='sg' href="https://github.com/matthewfeickert"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/5142394?u=310e7999b329801a47ebc999c2243fc9f2b32434&amp;v=4&amp;s=50" /><div>matthewfeickert</div></a>
+      
+        <a class='sg' href="https://github.com/lagru"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/20140352?u=fa6debadd435c15847d1435c49753f349e2d3526&amp;v=4&amp;s=50" /><div>lagru</div></a>
+      
+        <a class='sg' href="https://github.com/fly51fly"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/128885?u=c94144933329ff1a4f4a0d21c29195dff512953f&amp;v=4&amp;s=50" /><div>fly51fly</div></a>
+      
+        <a class='sg' href="https://github.com/tituspijean"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/8769166?u=4e1a4576008b7250b85dd79ed16a467ca1513bf6&amp;v=4&amp;s=50" /><div>tituspijean</div></a>
+      
+        <a class='sg' href="https://github.com/pavithraes"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/33131404?u=e684323fc0c4522e65a2d5286c2fe0f97bfde018&amp;v=4&amp;s=50" /><div>pavithraes</div></a>
+      
+        <a class='sg' href="https://github.com/clstaudt"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/875194?u=46a92f9f837d0ba150ae0f1d91091dd2f4ebb6cc&amp;v=4&amp;s=50" /><div>clstaudt</div></a>
+      
+        <a class='sg' href="https://github.com/mraspaud"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/167802?u=00caff64d01875edccfebe6e682b462314dedfa3&amp;v=4&amp;s=50" /><div>mraspaud</div></a>
+      
+        <a class='sg' href="https://github.com/eeshwarantharan"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/31663430?u=1c97c365291070970f4668379271af074ce0e754&amp;v=4&amp;s=50" /><div>eeshwarantharan</div></a>
+      
+        <a class='sg' href="https://github.com/bskinn"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/11325439?u=c1b22ac082236f5b84edef621e8d2a7d3692969f&amp;v=4&amp;s=50" /><div>bskinn</div></a>
+      
+    </div>
+
+    <p>&nbsp;</p>
+
+    <p>
+      If you're interested in partnering with us in support of Closember, please <a href="mailto:connect@quansight.com">email us.</a> Closember is currently sponsored by <a href="https://quansight.com" target="_blank">Quansight</a>, <a href="https://openteams.com" target="_blank">OpenTeams</a>, and <a href="https://faiross.org" target="_blank">FairOSS</a>.
+    </p>
+
+    <div class="sponsor-table">
+      <a href='https://quansight.com'><img src='assets/quansight.jpg' alt="Quansight Logo" width="200" height="200"></a>
+
+      <a href='https://openteams.com/'><img src='assets/openteams.webp' alt="OpenTeams logo" width="307" height="175"></a>
+
+      <a href='https://faiross.org/'><img src='assets/faiross.png' alt="FairOSS logo" width="247" height="150"></a>
+    </div>
+
+    <p>&nbsp;</p>
 
 
+    <h2 id="discussion">Discussion</h2>
+
+    <p>
+      As noted above, you can participate in the Closember discussion on Twitter by following <a href="https://twitter.com/ClosemberDev" target="_blank">@ClosemberDev</a> and using the <a href="https://twitter.com/hashtag/closember" target="_blank">#closember hashtag</a>. You can also engage in the thread below by commenting on <a href="https://github.com/openteamsinc/closember/issues/6" target="_blank">this GitHub issue</a>.
+    </p>
+
+    <script src="https://utteranc.es/client.js"
+    repo="openteamsinc/closember"
+    issue-number="6"
+    theme="github-light"
+    crossorigin="anonymous"
+    async>
+</script>
 
 
 
     <footer class="footer"><section class="container">
 
-    <div style="text-align: center;"><strong>Footer</strong></div>
+    <p>
+      Powered by <a href="https://pypi.org/project/Quart-Trio/" target="_blank">Quart</a>, <a href="https://trio.readthedocs.org/" target="_blank">Trio</a>, <a href="https://asks.readthedocs.io/en/latest/" target="_blank">Asks</a> and <a href="https://jinja.palletsprojects.com/en/3.1.x/" target="_blank">Jinja2</a>. Theme from <a href="https://milligram.io/" target="_blank">milligram</a>. No JS except for the <a href="https://utteranc.es/" target="_blank">utteranc.es</a> comment thread. Hero illustration by <a href="https://twitter.com/irinafumarel" target="_blank">Irina Fumarel</a>. Website text and images licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC-BY 4.0</a>, except for sponsor/partner logos for which all rights are reserved.
+    </p>
+    <p>
+      Page last built on: 2022-10-31 03:52:52 &mdash; Remaining query quota: 796
+    </p>
 
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     </section></footer>
