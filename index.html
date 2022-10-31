@@ -2,19 +2,19 @@
 <head>
 
 <title>Closember 2022 by Quansight</title>
-<meta name="description" content="Closember aims to increase awareness about Open Source maintainer burnout and promote practices to make maintaining open-source less stressful and more enjoyable for everyone.">
+<meta name="description" content="Closember aims to increase awareness about open source maintainer burnout and promote practices to make maintaining open source less stressful and more enjoyable for everyone.">
 
 <!-- Facebook Meta Tags -->
 <meta property="og:title" content="Closember 2022 by Quansight">
 <meta property="og:image" content="https://closember.org/assets/Closember_OG.png">
-<meta property="og:description" content="Closember aims to increase awareness about Open Source maintainer burnout and promote practices to make maintaining open-source less stressful and more enjoyable for everyone.">
+<meta property="og:description" content="Closember aims to increase awareness about open source maintainer burnout and promote practices to make maintaining open source less stressful and more enjoyable for everyone.">
 <meta property="og:url" content="https://closember.org">
 
 <meta name="twitter:card" content="summary_large_image" >
 <meta name="twitter:title" content="Closember 2022 by Quansight">
 <meta property="twitter:domain" content="closember.org">
 <meta property="twitter:url" content="https://closember.org">
-<meta name="twitter:description" content="Closember aims to increase awareness about Open Source maintainer burnout and promote practices to make maintaining open-source less stressful and more enjoyable for everyone.">
+<meta name="twitter:description" content="Closember aims to increase awareness about open source maintainer burnout and promote practices to make maintaining open source less stressful and more enjoyable for everyone.">
 <meta name="twitter:image" content="https://closember.org/assets/Closember_OG.png">
 
 
@@ -39,9 +39,34 @@
 <style>
 /* Base colours - chosen for accessibilty */
 body {
-    padding: 0;
-    margin: 0;
+    margin: 0px auto;
+    padding: 10px 14px;
+    max-width: 1100px;
     color: #593324;
+    font-size: 15pt;
+}
+
+@media (max-width: 979px) {
+    body
+    {
+        margin: 0px 20px;
+    }
+}
+
+nav {
+    margin: 1em 0em;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+div.nav {
+    margin: 0 1.5em;
+    padding: 0 0 0.4em 0;
+    border-bottom: 1.5px dotted #593324;
+}
+
+span.nav-divide {
+    padding: 0 0.4em;
 }
 
 .green-glow {
@@ -52,6 +77,11 @@ body {
 .red-glow {
     color: #d90710;
     text-shadow: 0 0 5px rgba(217, 7, 16, 0.5);
+}
+
+.gray-glow {
+    color: #444;
+    text-shadow: 0 0 5px rgba(20, 20, 20, 0.5);
 }
 
 li > p {
@@ -124,12 +154,12 @@ a:hover {
 }
 .header .container {
     border-top: 0;
-    padding-bottom: 7.5rem;
-    padding-top: 7.5rem;
+    /* padding-bottom: 7.5rem;
+    padding-top: 7.5rem; */
     position: relative;
     text-align: center;
-    padding-top: 3.5rem;
-    padding-bottom: 3.5rem;
+    /* padding-top: 3.5rem;
+    padding-bottom: 3.5rem; */
 }
 .header .title {
     font-family: Gotham Rounded A, Gotham Rounded B, Helvetica Neue, Arial, sans-serif;
@@ -153,22 +183,75 @@ a {
     color: #d90710;
 }
 
+
+h2 {
+    text-align: center;
+    font-family: Playball, "MJ AlGhifari", sans-serif;
+    color: #593324;
+    font-size: 250%;
+}
+
 h3 {
     color: #593324;
+    padding: 0 1.5em;
 }
 
 p {
     color: #593324;
+    text-align: left;
+    padding: 0 2em;
 }
 
 ul {
     color: #593324;
 }
 
-svg {
+ol {
+    padding: 0 4em;
+}
+
+blockquote {
+    margin: 1em 20em 2em 2.5em;
+    padding: 1em 2em 1em 2em;
+    text-align: left;
+    background-color: #ffe6dc;
+    border-left: 2px solid #593324;
+}
+
+code {
+    background-color: #fff0;
+    font-size: 100%;
+    margin: 0 0.15em;
+    padding: 0;
+}
+
+table {
+    margin-bottom: 4em;
+    padding: 0 2em;
+}
+
+/* svg {
     width: 100%;
     margin-top: -150;
     margin-bottom: -100px;
+} */
+
+div.hero {
+    /* transform: scale(0.5); */
+    scale: 0.6;
+    margin: 0 0 0 -190px;
+    /* text-align: left;
+    align-items: left;
+    justify-content: left;
+    flex-direction: column; */
+}
+
+div.back-to-top {
+    font-size: smaller;
+    font-style: italic;
+    text-align: right;
+    margin-right: 5em;
+    margin-bottom: 3em;
 }
 
 div#closed-sign {
@@ -194,12 +277,6 @@ div#closed-sign {
 }
 div#closed-sign:hover {
     background-color: #e0665d;
-}
-
-h2 {
-    text-align: center;
-    font-family: Playball, "MJ AlGhifari", sans-serif;
-    color: #593324;
 }
 
 .title {
@@ -264,25 +341,36 @@ frame.img {
     max-width: 160px;
 }
 
-@media (min-width: 40rem) {
+/* @media (min-width: 40rem) {
     .header {
         padding-top: 5rem;
     }
-}
+} */
 
 /*# sourceMappingURL=style.css.map */
 </style>
 
 </head>
+
 <body>
- <main class=wrapper>
- <nav class="navigation"></nav>
- <header class="header" id="home"><section class="container">
-<!-- <h1 class="title">Closember</h1>-->
- 
-    <h2>Getting ready for 2022</h2>
-   <div id='hero'>
-   <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+  <main class="wrapper">
+
+    <nav class="navigation" id="nav">
+      <div class="nav">
+        <a href="#why-closember">Why&nbsp;Closember?</a>
+        <span class="nav-divide">||</span>
+        <a href="#how-to-participate">How&nbsp;to&nbsp;Participate</a>
+        <span class="nav-divide">||</span>
+        <a href="#for-maintainers">For&nbsp;Maintainers</a>
+        <span class="nav-divide">||</span>
+        <a href="#closeboards">Closeboards</a>
+        <span class="nav-divide">||</span>
+        <a href="#show-your-support">Show&nbsp;Your&nbsp;Support</a>
+      </div>
+    </nav>
+
+    <header class="header" id="home"><section class="container">
+      <div class="hero" id="hero">  <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -1418,1402 +1506,1131 @@ frame.img {
    style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect628);fill:#000000;fill-opacity:1;stroke:none;"
    id="text626"
    xml:space="preserve" /></svg>
-
-   </div>
-    <p>Closember 2022 is coming up fast! Counters are back to zero and we'll again track who closed the most issues. Your
-    help is welcomed ! Please come contribute to the <a
-    href="https://github.com/openteamsinc/closember/issues">closember repo</a>. Follow <a
-    href='https://twitter.com/ClosemberDev'>@ClosemberDev</a>, and use the <a
-    href='https://twitter.com/hashtag/closember'>#closember</a> hashtag. </p>
- 
- <p>Close/Merge as many issues and PR as possible <b>during the month of November</b>. Maintainers, tag your repositories with
- the <a href="https://github.com/topics/closember"><code>closember</code> topic</a> to participate.</p>
-   <!--<div id='closed-sign'>-->
-   </div>
-   <h3><span class='green-glow'>0</span> / <span class='red-glow'>13082 </span> </h3>
-   <blockquote>
-<p>Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.</p>
-<footer><small>― Antoine de Saint-Exupéry,</small></footer>
-</blockquote>
-   <p><span class='green-glow'>0</span> issues and pull-requests closed (or merged) so far! We need your help with
-   the <span
-   class='red-glow'>13082 </span> that need to go... </p>
-   <a class="button" href="#help" title="Getting Started">Start Closing Issues</a>
-   </section></header>
-  <section class='container'>
-
-
-
-<p>Metric collections have stopped since Dec 1st, you can still tag your repo with the closember tag to see how well you
-did, and get ready for next year.</p>
-
-
-<h2>Why Closember ?</h2>
-<h4>Closember aims to increase awareness about Open Source maintainer burnout and promote practices to make maintaining open-source less stressful and more enjoyable for everyone. <a href="#more">more&hellip;</a></h4>
-<hr />
-<h2>Did you know ?</h2>
-<hr />
-<h4>You can go to <a href="https://github.com/issues">https://github.com/issues</a> and <a href="https://github.com/pulls">https://github.com/pulls</a> to see all the issues/pull-requests <strong>you</strong> opened. Are those still relevant ? Maybe close a few if not.</h4>
-<hr />
-<h2>Closeboard</h2>
-<p>Placeholder values : Will be reset to 0 on Nov 1<sup>st</sup> when Closember starts.</p>
-
-<table class='c1'>
-<tr>
-<th>#</th>
-<th>Repository</th>
-<th>Closed Issues</th>
-<th>Closed/Merged PRs</th>
-</tr>
-
-<tr>
-  <td>1</td>
-  <td ><a href='https://github.com/vispy/vispy'>vispy/vispy<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>2</td>
-  <td ><a href='https://github.com/tqdm/tqdm'>tqdm/tqdm<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>3</td>
-  <td ><a href='https://github.com/timofurrer/awesome-asyncio'>timofurrer/awesome-asyncio<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>4</td>
-  <td ><a href='https://github.com/spyder-ide/spyder'>spyder-ide/spyder<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>5</td>
-  <td ><a href='https://github.com/spyder-ide/qtpy'>spyder-ide/qtpy<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>6</td>
-  <td ><a href='https://github.com/spyder-ide/qtawesome'>spyder-ide/qtawesome<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>7</td>
-  <td ><a href='https://github.com/snek5000/snek5000'>snek5000/snek5000<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>8</td>
-  <td ><a href='https://github.com/scipy/scipy'>scipy/scipy<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>9</td>
-  <td ><a href='https://github.com/scikit-image/scikit-image'>scikit-image/scikit-image<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>10</td>
-  <td ><a href='https://github.com/scikit-hep/pyhf'>scikit-hep/pyhf<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>11</td>
-  <td ><a href='https://github.com/rse-asia/RSE_Asia'>rse-asia/RSE_Asia<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>12</td>
-  <td ><a href='https://github.com/rse-asia/OLS-4'>rse-asia/OLS-4<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>13</td>
-  <td ><a href='https://github.com/radis/radis'>radis/radis<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>14</td>
-  <td ><a href='https://github.com/r-devel/rdevguide'>r-devel/rdevguide<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>15</td>
-  <td ><a href='https://github.com/pytroll/satpy'>pytroll/satpy<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>16</td>
-  <td ><a href='https://github.com/pytroll/pyspectral'>pytroll/pyspectral<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>17</td>
-  <td ><a href='https://github.com/pytroll/pyresample'>pytroll/pyresample<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>18</td>
-  <td ><a href='https://github.com/pytroll/pyorbital'>pytroll/pyorbital<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>19</td>
-  <td ><a href='https://github.com/pytroll/pygac-fdr'>pytroll/pygac-fdr<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>20</td>
-  <td ><a href='https://github.com/pymc-devs/pymc-examples'>pymc-devs/pymc-examples<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>21</td>
-  <td ><a href='https://github.com/pygfx/wgpu-py'>pygfx/wgpu-py<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>22</td>
-  <td ><a href='https://github.com/pygfx/pygfx'>pygfx/pygfx<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>23</td>
-  <td ><a href='https://github.com/psychoinformatics-de/datalad-debian'>psychoinformatics-de/datalad-debian<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>24</td>
-  <td ><a href='https://github.com/poliastro/poliastro'>poliastro/poliastro<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>25</td>
-  <td ><a href='https://github.com/physiopy/phys2denoise'>physiopy/phys2denoise<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>26</td>
-  <td ><a href='https://github.com/physiopy/phys2bids'>physiopy/phys2bids<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>27</td>
-  <td ><a href='https://github.com/openteamsinc/closember'>openteamsinc/closember<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>28</td>
-  <td ><a href='https://github.com/librosa/librosa'>librosa/librosa<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>29</td>
-  <td ><a href='https://github.com/kailashchoudhary11/imgman'>kailashchoudhary11/imgman<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>30</td>
-  <td ><a href='https://github.com/jupyter/papyri'>jupyter/papyri<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>31</td>
-  <td ><a href='https://github.com/jupyter/notebook'>jupyter/notebook<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>32</td>
-  <td ><a href='https://github.com/ipython/traitlets'>ipython/traitlets<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>33</td>
-  <td ><a href='https://github.com/ipython/ipython'>ipython/ipython<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>34</td>
-  <td ><a href='https://github.com/ipython/ipykernel'>ipython/ipykernel<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>35</td>
-  <td ><a href='https://github.com/icesat2py/icepyx'>icesat2py/icepyx<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>36</td>
-  <td ><a href='https://github.com/eX-Mech/pymech'>eX-Mech/pymech<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>37</td>
-  <td ><a href='https://github.com/datalad/datalad-xnat'>datalad/datalad-xnat<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>38</td>
-  <td ><a href='https://github.com/datalad/datalad-ukbiobank'>datalad/datalad-ukbiobank<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>39</td>
-  <td ><a href='https://github.com/datalad/datalad-osf'>datalad/datalad-osf<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>40</td>
-  <td ><a href='https://github.com/datalad/datalad-next'>datalad/datalad-next<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>41</td>
-  <td ><a href='https://github.com/datalad/datalad-metalad'>datalad/datalad-metalad<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>42</td>
-  <td ><a href='https://github.com/datalad/datalad-gooey'>datalad/datalad-gooey<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>43</td>
-  <td ><a href='https://github.com/datalad/datalad-ebrains'>datalad/datalad-ebrains<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>44</td>
-  <td ><a href='https://github.com/datalad/datalad-dataverse'>datalad/datalad-dataverse<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>45</td>
-  <td ><a href='https://github.com/datalad/datalad-catalog'>datalad/datalad-catalog<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>46</td>
-  <td ><a href='https://github.com/datalad/datalad'>datalad/datalad<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>47</td>
-  <td ><a href='https://github.com/cpp-lln-lab/bidspm'>cpp-lln-lab/bidspm<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>48</td>
-  <td ><a href='https://github.com/cpp-lln-lab/bidsMReye'>cpp-lln-lab/bidsMReye<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>49</td>
-  <td ><a href='https://github.com/codezonediitj/pydatastructs'>codezonediitj/pydatastructs<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>50</td>
-  <td ><a href='https://github.com/bids-standard/bids-starter-kit'>bids-standard/bids-starter-kit<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>51</td>
-  <td ><a href='https://github.com/bids-standard/bids-matlab'>bids-standard/bids-matlab<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>52</td>
-  <td ><a href='https://github.com/ayan-biswas0412/AlgoDocs'>ayan-biswas0412/AlgoDocs<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>53</td>
-  <td ><a href='https://github.com/astropy/astroquery'>astropy/astroquery<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>54</td>
-  <td ><a href='https://github.com/arviz-devs/arviz'>arviz-devs/arviz<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>55</td>
-  <td ><a href='https://github.com/WarwickRUG/wrug_website'>WarwickRUG/wrug_website<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>56</td>
-  <td ><a href='https://github.com/Remi-Gau/eCobidas'>Remi-Gau/eCobidas<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>57</td>
-  <td ><a href='https://github.com/PyCQA/pylint'>PyCQA/pylint<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>58</td>
-  <td ><a href='https://github.com/PyCQA/astroid'>PyCQA/astroid<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>59</td>
-  <td ><a href='https://github.com/P403n1x87/austin-vscode'>P403n1x87/austin-vscode<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>60</td>
-  <td ><a href='https://github.com/MeeseeksBox/MeeseeksDev'>MeeseeksBox/MeeseeksDev<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>61</td>
-  <td ><a href='https://github.com/FCP-INDI/fcp-indi.github.io'>FCP-INDI/fcp-indi.github.io<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>62</td>
-  <td ><a href='https://github.com/FCP-INDI/cpac'>FCP-INDI/cpac<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>63</td>
-  <td ><a href='https://github.com/FCP-INDI/app-C-PAC-brainlife.io'>FCP-INDI/app-C-PAC-brainlife.io<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>64</td>
-  <td ><a href='https://github.com/FCP-INDI/C-PAC_GUI'>FCP-INDI/C-PAC_GUI<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>65</td>
-  <td ><a href='https://github.com/FCP-INDI/C-PAC'>FCP-INDI/C-PAC<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>66</td>
-  <td ><a href='https://github.com/FCP-INDI/.github'>FCP-INDI/.github<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-<tr>
-  <td>67</td>
-  <td ><a href='https://github.com/Atri-Labs/atrilabs-engine'>Atri-Labs/atrilabs-engine<a></td>
-  <td class='green-glow'>0</td>
-  <td class='green-glow'>0</td>
-</tr>
-
-</table>
-  <div style='text-align:center'><a class='button' href='#add-topic'>Add Your Repositories</a></div>
-
-
-<blockquote>
-<p>Remember remember to close a PR in November.</p>
-<footer><small>― A Maintainer,</small></footer>
-</blockquote>
-
-
-<p>This table tracks the number of Issues and Pull requests that have been closed(or merged) in each of projects during the month of Closember. 
-Issues opened in Closember <strong>do not count</strong> in an effort to encourage the closing of older issues.</p>
-<h2>Total Open</h2>
-<p>Placeholder values : Will be reset to 0 on Nov 1<sup>st</sup> when Closember starts.</p>
-
-<table class='c2'>
-<tr>
-<th>#</th>
-<th>Repository</th>
-<th>Open Issues</th>
-<th>Open PRs</th>
-</tr>
-
-<tr>
-  <td>1 </td>
-  <td ><a href='https://github.com/FCP-INDI/.github'>FCP-INDI/.github<a></td>
-  <td class='red-glow'>0</td>
-  <td class='red-glow'>0</td>
-</tr>
-
-<tr>
-  <td>2 </td>
-  <td ><a href='https://github.com/rse-asia/OLS-4'>rse-asia/OLS-4<a></td>
-  <td class='red-glow'>5</td>
-  <td class='red-glow'>0</td>
-</tr>
-
-<tr>
-  <td>3 </td>
-  <td ><a href='https://github.com/P403n1x87/austin-vscode'>P403n1x87/austin-vscode<a></td>
-  <td class='red-glow'>6</td>
-  <td class='red-glow'>0</td>
-</tr>
-
-<tr>
-  <td>4 </td>
-  <td ><a href='https://github.com/FCP-INDI/app-C-PAC-brainlife.io'>FCP-INDI/app-C-PAC-brainlife.io<a></td>
-  <td class='red-glow'>7</td>
-  <td class='red-glow'>0</td>
-</tr>
-
-<tr>
-  <td>5 </td>
-  <td ><a href='https://github.com/WarwickRUG/wrug_website'>WarwickRUG/wrug_website<a></td>
-  <td class='red-glow'>9</td>
-  <td class='red-glow'>0</td>
-</tr>
-
-<tr>
-  <td>6 </td>
-  <td ><a href='https://github.com/timofurrer/awesome-asyncio'>timofurrer/awesome-asyncio<a></td>
-  <td class='red-glow'>0</td>
-  <td class='red-glow'>9</td>
-</tr>
-
-<tr>
-  <td>7 </td>
-  <td ><a href='https://github.com/cpp-lln-lab/bidsMReye'>cpp-lln-lab/bidsMReye<a></td>
-  <td class='red-glow'>11</td>
-  <td class='red-glow'>0</td>
-</tr>
-
-<tr>
-  <td>8 </td>
-  <td ><a href='https://github.com/openteamsinc/closember'>openteamsinc/closember<a></td>
-  <td class='red-glow'>11</td>
-  <td class='red-glow'>0</td>
-</tr>
-
-<tr>
-  <td>9 </td>
-  <td ><a href='https://github.com/pytroll/pygac-fdr'>pytroll/pygac-fdr<a></td>
-  <td class='red-glow'>9</td>
-  <td class='red-glow'>2</td>
-</tr>
-
-<tr>
-  <td>10 </td>
-  <td ><a href='https://github.com/datalad/datalad-ebrains'>datalad/datalad-ebrains<a></td>
-  <td class='red-glow'>10</td>
-  <td class='red-glow'>2</td>
-</tr>
-
-<tr>
-  <td>11 </td>
-  <td ><a href='https://github.com/datalad/datalad-ukbiobank'>datalad/datalad-ukbiobank<a></td>
-  <td class='red-glow'>13</td>
-  <td class='red-glow'>0</td>
-</tr>
-
-<tr>
-  <td>12 </td>
-  <td ><a href='https://github.com/pygfx/wgpu-py'>pygfx/wgpu-py<a></td>
-  <td class='red-glow'>12</td>
-  <td class='red-glow'>1</td>
-</tr>
-
-<tr>
-  <td>13 </td>
-  <td ><a href='https://github.com/spyder-ide/qtawesome'>spyder-ide/qtawesome<a></td>
-  <td class='red-glow'>11</td>
-  <td class='red-glow'>2</td>
-</tr>
-
-<tr>
-  <td>14 </td>
-  <td ><a href='https://github.com/FCP-INDI/cpac'>FCP-INDI/cpac<a></td>
-  <td class='red-glow'>13</td>
-  <td class='red-glow'>1</td>
-</tr>
-
-<tr>
-  <td>15 </td>
-  <td ><a href='https://github.com/datalad/datalad-xnat'>datalad/datalad-xnat<a></td>
-  <td class='red-glow'>13</td>
-  <td class='red-glow'>1</td>
-</tr>
-
-<tr>
-  <td>16 </td>
-  <td ><a href='https://github.com/rse-asia/RSE_Asia'>rse-asia/RSE_Asia<a></td>
-  <td class='red-glow'>12</td>
-  <td class='red-glow'>2</td>
-</tr>
-
-<tr>
-  <td>17 </td>
-  <td ><a href='https://github.com/kailashchoudhary11/imgman'>kailashchoudhary11/imgman<a></td>
-  <td class='red-glow'>13</td>
-  <td class='red-glow'>3</td>
-</tr>
-
-<tr>
-  <td>18 </td>
-  <td ><a href='https://github.com/ayan-biswas0412/AlgoDocs'>ayan-biswas0412/AlgoDocs<a></td>
-  <td class='red-glow'>13</td>
-  <td class='red-glow'>4</td>
-</tr>
-
-<tr>
-  <td>19 </td>
-  <td ><a href='https://github.com/datalad/datalad-next'>datalad/datalad-next<a></td>
-  <td class='red-glow'>15</td>
-  <td class='red-glow'>2</td>
-</tr>
-
-<tr>
-  <td>20 </td>
-  <td ><a href='https://github.com/eX-Mech/pymech'>eX-Mech/pymech<a></td>
-  <td class='red-glow'>14</td>
-  <td class='red-glow'>3</td>
-</tr>
-
-<tr>
-  <td>21 </td>
-  <td ><a href='https://github.com/spyder-ide/qtpy'>spyder-ide/qtpy<a></td>
-  <td class='red-glow'>12</td>
-  <td class='red-glow'>5</td>
-</tr>
-
-<tr>
-  <td>22 </td>
-  <td ><a href='https://github.com/datalad/datalad-osf'>datalad/datalad-osf<a></td>
-  <td class='red-glow'>17</td>
-  <td class='red-glow'>1</td>
-</tr>
-
-<tr>
-  <td>23 </td>
-  <td ><a href='https://github.com/pytroll/pyspectral'>pytroll/pyspectral<a></td>
-  <td class='red-glow'>19</td>
-  <td class='red-glow'>1</td>
-</tr>
-
-<tr>
-  <td>24 </td>
-  <td ><a href='https://github.com/bids-standard/bids-starter-kit'>bids-standard/bids-starter-kit<a></td>
-  <td class='red-glow'>20</td>
-  <td class='red-glow'>2</td>
-</tr>
-
-<tr>
-  <td>25 </td>
-  <td ><a href='https://github.com/physiopy/phys2denoise'>physiopy/phys2denoise<a></td>
-  <td class='red-glow'>16</td>
-  <td class='red-glow'>6</td>
-</tr>
-
-<tr>
-  <td>26 </td>
-  <td ><a href='https://github.com/pytroll/pyorbital'>pytroll/pyorbital<a></td>
-  <td class='red-glow'>16</td>
-  <td class='red-glow'>7</td>
-</tr>
-
-<tr>
-  <td>27 </td>
-  <td ><a href='https://github.com/datalad/datalad-dataverse'>datalad/datalad-dataverse<a></td>
-  <td class='red-glow'>21</td>
-  <td class='red-glow'>3</td>
-</tr>
-
-<tr>
-  <td>28 </td>
-  <td ><a href='https://github.com/bids-standard/bids-matlab'>bids-standard/bids-matlab<a></td>
-  <td class='red-glow'>28</td>
-  <td class='red-glow'>2</td>
-</tr>
-
-<tr>
-  <td>29 </td>
-  <td ><a href='https://github.com/snek5000/snek5000'>snek5000/snek5000<a></td>
-  <td class='red-glow'>27</td>
-  <td class='red-glow'>4</td>
-</tr>
-
-<tr>
-  <td>30 </td>
-  <td ><a href='https://github.com/MeeseeksBox/MeeseeksDev'>MeeseeksBox/MeeseeksDev<a></td>
-  <td class='red-glow'>31</td>
-  <td class='red-glow'>2</td>
-</tr>
-
-<tr>
-  <td>31 </td>
-  <td ><a href='https://github.com/r-devel/rdevguide'>r-devel/rdevguide<a></td>
-  <td class='red-glow'>29</td>
-  <td class='red-glow'>5</td>
-</tr>
-
-<tr>
-  <td>32 </td>
-  <td ><a href='https://github.com/FCP-INDI/C-PAC_GUI'>FCP-INDI/C-PAC_GUI<a></td>
-  <td class='red-glow'>32</td>
-  <td class='red-glow'>6</td>
-</tr>
-
-<tr>
-  <td>33 </td>
-  <td ><a href='https://github.com/psychoinformatics-de/datalad-debian'>psychoinformatics-de/datalad-debian<a></td>
-  <td class='red-glow'>35</td>
-  <td class='red-glow'>4</td>
-</tr>
-
-<tr>
-  <td>34 </td>
-  <td ><a href='https://github.com/Remi-Gau/eCobidas'>Remi-Gau/eCobidas<a></td>
-  <td class='red-glow'>40</td>
-  <td class='red-glow'>0</td>
-</tr>
-
-<tr>
-  <td>35 </td>
-  <td ><a href='https://github.com/datalad/datalad-catalog'>datalad/datalad-catalog<a></td>
-  <td class='red-glow'>39</td>
-  <td class='red-glow'>1</td>
-</tr>
-
-<tr>
-  <td>36 </td>
-  <td ><a href='https://github.com/librosa/librosa'>librosa/librosa<a></td>
-  <td class='red-glow'>39</td>
-  <td class='red-glow'>5</td>
-</tr>
-
-<tr>
-  <td>37 </td>
-  <td ><a href='https://github.com/datalad/datalad-gooey'>datalad/datalad-gooey<a></td>
-  <td class='red-glow'>43</td>
-  <td class='red-glow'>2</td>
-</tr>
-
-<tr>
-  <td>38 </td>
-  <td ><a href='https://github.com/physiopy/phys2bids'>physiopy/phys2bids<a></td>
-  <td class='red-glow'>42</td>
-  <td class='red-glow'>7</td>
-</tr>
-
-<tr>
-  <td>39 </td>
-  <td ><a href='https://github.com/jupyter/papyri'>jupyter/papyri<a></td>
-  <td class='red-glow'>50</td>
-  <td class='red-glow'>1</td>
-</tr>
-
-<tr>
-  <td>40 </td>
-  <td ><a href='https://github.com/icesat2py/icepyx'>icesat2py/icepyx<a></td>
-  <td class='red-glow'>44</td>
-  <td class='red-glow'>9</td>
-</tr>
-
-<tr>
-  <td>41 </td>
-  <td ><a href='https://github.com/pygfx/pygfx'>pygfx/pygfx<a></td>
-  <td class='red-glow'>53</td>
-  <td class='red-glow'>5</td>
-</tr>
-
-<tr>
-  <td>42 </td>
-  <td ><a href='https://github.com/cpp-lln-lab/bidspm'>cpp-lln-lab/bidspm<a></td>
-  <td class='red-glow'>61</td>
-  <td class='red-glow'>2</td>
-</tr>
-
-<tr>
-  <td>43 </td>
-  <td ><a href='https://github.com/radis/radis'>radis/radis<a></td>
-  <td class='red-glow'>59</td>
-  <td class='red-glow'>4</td>
-</tr>
-
-<tr>
-  <td>44 </td>
-  <td ><a href='https://github.com/codezonediitj/pydatastructs'>codezonediitj/pydatastructs<a></td>
-  <td class='red-glow'>58</td>
-  <td class='red-glow'>14</td>
-</tr>
-
-<tr>
-  <td>45 </td>
-  <td ><a href='https://github.com/FCP-INDI/fcp-indi.github.io'>FCP-INDI/fcp-indi.github.io<a></td>
-  <td class='red-glow'>68</td>
-  <td class='red-glow'>7</td>
-</tr>
-
-<tr>
-  <td>46 </td>
-  <td ><a href='https://github.com/pytroll/pyresample'>pytroll/pyresample<a></td>
-  <td class='red-glow'>79</td>
-  <td class='red-glow'>11</td>
-</tr>
-
-<tr>
-  <td>47 </td>
-  <td ><a href='https://github.com/datalad/datalad-metalad'>datalad/datalad-metalad<a></td>
-  <td class='red-glow'>96</td>
-  <td class='red-glow'>1</td>
-</tr>
-
-<tr>
-  <td>48 </td>
-  <td ><a href='https://github.com/Atri-Labs/atrilabs-engine'>Atri-Labs/atrilabs-engine<a></td>
-  <td class='red-glow'>95</td>
-  <td class='red-glow'>3</td>
-</tr>
-
-<tr>
-  <td>49 </td>
-  <td ><a href='https://github.com/ipython/traitlets'>ipython/traitlets<a></td>
-  <td class='red-glow'>91</td>
-  <td class='red-glow'>9</td>
-</tr>
-
-<tr>
-  <td>50 </td>
-  <td ><a href='https://github.com/poliastro/poliastro'>poliastro/poliastro<a></td>
-  <td class='red-glow'>96</td>
-  <td class='red-glow'>24</td>
-</tr>
-
-<tr>
-  <td>51 </td>
-  <td ><a href='https://github.com/pymc-devs/pymc-examples'>pymc-devs/pymc-examples<a></td>
-  <td class='red-glow'>111</td>
-  <td class='red-glow'>16</td>
-</tr>
-
-<tr>
-  <td>52 </td>
-  <td ><a href='https://github.com/PyCQA/astroid'>PyCQA/astroid<a></td>
-  <td class='red-glow'>147</td>
-  <td class='red-glow'>25</td>
-</tr>
-
-<tr>
-  <td>53 </td>
-  <td ><a href='https://github.com/arviz-devs/arviz'>arviz-devs/arviz<a></td>
-  <td class='red-glow'>164</td>
-  <td class='red-glow'>12</td>
-</tr>
-
-<tr>
-  <td>54 </td>
-  <td ><a href='https://github.com/ipython/ipykernel'>ipython/ipykernel<a></td>
-  <td class='red-glow'>217</td>
-  <td class='red-glow'>22</td>
-</tr>
-
-<tr>
-  <td>55 </td>
-  <td ><a href='https://github.com/vispy/vispy'>vispy/vispy<a></td>
-  <td class='red-glow'>278</td>
-  <td class='red-glow'>34</td>
-</tr>
-
-<tr>
-  <td>56 </td>
-  <td ><a href='https://github.com/FCP-INDI/C-PAC'>FCP-INDI/C-PAC<a></td>
-  <td class='red-glow'>348</td>
-  <td class='red-glow'>11</td>
-</tr>
-
-<tr>
-  <td>57 </td>
-  <td ><a href='https://github.com/scikit-hep/pyhf'>scikit-hep/pyhf<a></td>
-  <td class='red-glow'>336</td>
-  <td class='red-glow'>31</td>
-</tr>
-
-<tr>
-  <td>58 </td>
-  <td ><a href='https://github.com/tqdm/tqdm'>tqdm/tqdm<a></td>
-  <td class='red-glow'>301</td>
-  <td class='red-glow'>85</td>
-</tr>
-
-<tr>
-  <td>59 </td>
-  <td ><a href='https://github.com/pytroll/satpy'>pytroll/satpy<a></td>
-  <td class='red-glow'>317</td>
-  <td class='red-glow'>92</td>
-</tr>
-
-<tr>
-  <td>60 </td>
-  <td ><a href='https://github.com/astropy/astroquery'>astropy/astroquery<a></td>
-  <td class='red-glow'>420</td>
-  <td class='red-glow'>54</td>
-</tr>
-
-<tr>
-  <td>61 </td>
-  <td ><a href='https://github.com/datalad/datalad'>datalad/datalad<a></td>
-  <td class='red-glow'>550</td>
-  <td class='red-glow'>13</td>
-</tr>
-
-<tr>
-  <td>62 </td>
-  <td ><a href='https://github.com/scikit-image/scikit-image'>scikit-image/scikit-image<a></td>
-  <td class='red-glow'>441</td>
-  <td class='red-glow'>200</td>
-</tr>
-
-<tr>
-  <td>63 </td>
-  <td ><a href='https://github.com/PyCQA/pylint'>PyCQA/pylint<a></td>
-  <td class='red-glow'>644</td>
-  <td class='red-glow'>45</td>
-</tr>
-
-<tr>
-  <td>64 </td>
-  <td ><a href='https://github.com/spyder-ide/spyder'>spyder-ide/spyder<a></td>
-  <td class='red-glow'>1101</td>
-  <td class='red-glow'>62</td>
-</tr>
-
-<tr>
-  <td>65 </td>
-  <td ><a href='https://github.com/ipython/ipython'>ipython/ipython<a></td>
-  <td class='red-glow'>1460</td>
-  <td class='red-glow'>70</td>
-</tr>
-
-<tr>
-  <td>66 </td>
-  <td ><a href='https://github.com/scipy/scipy'>scipy/scipy<a></td>
-  <td class='red-glow'>1414</td>
-  <td class='red-glow'>285</td>
-</tr>
-
-<tr>
-  <td>67 </td>
-  <td ><a href='https://github.com/jupyter/notebook'>jupyter/notebook<a></td>
-  <td class='red-glow'>1992</td>
-  <td class='red-glow'>46</td>
-</tr>
-
-</table>
-  <div style='text-align:center'><a class='button' href='#add-topic'>Add Your Repositories</a></div>
-
-
-<p>There is no perfect metric, and we sometimes f
-et that issues are forgotten on the last page of the issue list.
-Here is a leader board of who has closed the oldest issues during the month.</p>
-<h2>Longest open issue</h2>
-<p>This shows the longest opened issue closed during Closember.</p>
-<p>(Note: there is not longest open PR because of GitHub API. Unless you find a way to do it)</p>
-<p>Placeholder values : Will be reset to 0 on Nov 1<sup>st</sup> when Closember starts.</p>
-
-<table class='c2'>
-<tr>
-<th>#</th>
-<th>Repository</th>
-<th>Closed After</th>
-<th>Oldest issue closed</th>
-</tr>
-
-</table>
-<hr />
-  <div style='text-align:center'><a class='button' href='#add-topic'>Add Your Repositories</a></div>
-
-<p>Those are <em>suggested</em> metrics, they are of course not absolute. Your community should have its own goal, though be
-careful about the <a href="https://en.wikibooks.org/wiki/Professionalism/Diane_Vaughan_and_the_normalization_of_deviance">Normalization of
-deviance</a>. You can also
-suggest metrics, send us a PR, or open an issue.</p>
-
-
-<h2> Show your support : 54 Supporters </h2>
-
-<p>Star <a href='https://github.com/openteamsinc/closember'>our repository</a> to show your support even if your own
-organizations or projects don't participate <!-- Place this tag where you want the button to render. -->
-<a class="github-button" href="https://github.com/openteamsinc/closember" data-icon="octicon-star" aria-label="Star
-opentaemsinc/closember on GitHub">Star</a> </p>
-
-
-<div class='avatar-container'>
-
-<a class='sg' href="https://github.com/JPTIZ"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/11988816?u=fe327ecc98f72684e37762cb377208318f784c05&amp;v=4&amp;s=50" /><div>JPTIZ</div></a>
-
-<a class='sg' href="https://github.com/hearot"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/32136919?u=31fe36b26476c11bc9a9494f9e8435cfc91e7a86&amp;v=4&amp;s=50" /><div>hearot</div></a>
-
-<a class='sg' href="https://github.com/hameerabbasi"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/2190658?u=b85e13f985d0bf87eeb3a7a146b61dcc9586019b&amp;v=4&amp;s=50" /><div>hameerabbasi</div></a>
-
-<a class='sg' href="https://github.com/diefans"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/513316?u=eb4b82acc2d3ea05b9be93b6bd7126d02569b4b8&amp;v=4&amp;s=50" /><div>diefans</div></a>
-
-<a class='sg' href="https://github.com/Carreau"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/335567?v=4&amp;s=50" /><div>Carreau</div></a>
-
-<a class='sg' href="https://github.com/ericdatakelly"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/24855669?u=87a2c7f3bc01ac97ff462203cefa648d226a2520&amp;v=4&amp;s=50" /><div>ericdatakelly</div></a>
-
-<a class='sg' href="https://github.com/willmcgugan"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/554369?u=8015a7d742d8bd7ee9d1efe30c138737d6098cd3&amp;v=4&amp;s=50" /><div>willmcgugan</div></a>
-
-<a class='sg' href="https://github.com/astrojuanlu"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/316517?u=6bd68bdde58b9c4bc9e06c26cc231175059a7aea&amp;v=4&amp;s=50" /><div>astrojuanlu</div></a>
-
-<a class='sg' href="https://github.com/jefftriplett"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/50527?u=af1ddfd50f6afd6d99f333ba2ac8d0a5b245ea74&amp;v=4&amp;s=50" /><div>jefftriplett</div></a>
-
-<a class='sg' href="https://github.com/timofurrer"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/1008252?u=2bde4396f4cb650b73de9e86c7608f5b7eac24a8&amp;v=4&amp;s=50" /><div>timofurrer</div></a>
-
-<a class='sg' href="https://github.com/ENM1989"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/2657224?u=4ae4b30abb1d80a0ca596c71e6b5d3c446dc575e&amp;v=4&amp;s=50" /><div>ENM1989</div></a>
-
-<a class='sg' href="https://github.com/neutrinoceros"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/14075922?v=4&amp;s=50" /><div>neutrinoceros</div></a>
-
-<a class='sg' href="https://github.com/czgdp1807"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/36567889?u=832d7c5373f0e02f2b2398cfe784cebbb0471576&amp;v=4&amp;s=50" /><div>czgdp1807</div></a>
-
-<a class='sg' href="https://github.com/pratikgl"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/43725022?u=8d8f15e1dedc2f7395877d459c8bcaaaea62d7b0&amp;v=4&amp;s=50" /><div>pratikgl</div></a>
-
-<a class='sg' href="https://github.com/thelittlebug"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/2874956?u=9f07175318c9d3d04b52fb57bfb6df46b159e690&amp;v=4&amp;s=50" /><div>thelittlebug</div></a>
-
-<a class='sg' href="https://github.com/toonarmycaptain"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/29956894?v=4&amp;s=50" /><div>toonarmycaptain</div></a>
-
-<a class='sg' href="https://github.com/Jordan-Cottle"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/37338122?u=8e146a4f6aafdc38211d2c80e61870de5ab6de0b&amp;v=4&amp;s=50" /><div>Jordan-Cottle</div></a>
-
-<a class='sg' href="https://github.com/joshuacwnewton"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/16181459?u=74cc00fc4f98c447d71b9d918f1a416c03db1a7e&amp;v=4&amp;s=50" /><div>joshuacwnewton</div></a>
-
-<a class='sg' href="https://github.com/dalthviz"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/16781833?u=f11fabb4382b63e96428df6a7fb89bd907d45133&amp;v=4&amp;s=50" /><div>dalthviz</div></a>
-
-<a class='sg' href="https://github.com/ayharano"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/13336?u=c6c35b212309fef458dcd0dc4d4d48cfd39171f5&amp;v=4&amp;s=50" /><div>ayharano</div></a>
-
-<a class='sg' href="https://github.com/luizirber"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/6642?u=5ec9e951dd3510a1a124750f786cfa245aab30e4&amp;v=4&amp;s=50" /><div>luizirber</div></a>
-
-<a class='sg' href="https://github.com/SaranjeetKaur"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/28556616?v=4&amp;s=50" /><div>SaranjeetKaur</div></a>
-
-<a class='sg' href="https://github.com/InessaPawson"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/43481325?u=8c0c0adbf3f2efd2cce72951d3554064c7bbfce3&amp;v=4&amp;s=50" /><div>InessaPawson</div></a>
-
-<a class='sg' href="https://github.com/mih"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/136479?u=c458067f070d983fd3df2c58630ee9236b75f2e5&amp;v=4&amp;s=50" /><div>mih</div></a>
-
-<a class='sg' href="https://github.com/smoia"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/35300580?u=86d2ef3ab1e7206daceefaddbe270777553ad77b&amp;v=4&amp;s=50" /><div>smoia</div></a>
-
-<a class='sg' href="https://github.com/bsipocz"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/6788290?u=d9a388224b87d55106cb3e6199d02ebc1d8e0553&amp;v=4&amp;s=50" /><div>bsipocz</div></a>
-
-<a class='sg' href="https://github.com/mwcraig"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/1147167?v=4&amp;s=50" /><div>mwcraig</div></a>
-
-<a class='sg' href="https://github.com/adswa"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/29738718?u=0ca52796d2273e4a0019d0b88dfd01c025782c9d&amp;v=4&amp;s=50" /><div>adswa</div></a>
-
-<a class='sg' href="https://github.com/dcherian"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/2448579?u=5e0d7443f68017a6946a79185ed94e3dfe032517&amp;v=4&amp;s=50" /><div>dcherian</div></a>
-
-<a class='sg' href="https://github.com/yarikoptic"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/39889?u=bd28816c18beaddc4da762d61d842547fdb271d9&amp;v=4&amp;s=50" /><div>yarikoptic</div></a>
-
-<a class='sg' href="https://github.com/mvdoc"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/6150554?u=ca803c0bace95340373e28e6b8eddc6ccd0a7caa&amp;v=4&amp;s=50" /><div>mvdoc</div></a>
-
-<a class='sg' href="https://github.com/yochannah"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/9271438?u=67212f487f50781b0ae81ebdb05ee0fefa4ae2e1&amp;v=4&amp;s=50" /><div>yochannah</div></a>
-
-<a class='sg' href="https://github.com/Remi-Gau"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/6961185?u=52aef81722a11b6512facf23be04ad48665165f3&amp;v=4&amp;s=50" /><div>Remi-Gau</div></a>
-
-<a class='sg' href="https://github.com/jadecci"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/14807815?u=d56be2817c5d712b4f46d168929b9e98d0dbdb6f&amp;v=4&amp;s=50" /><div>jadecci</div></a>
-
-<a class='sg' href="https://github.com/djhoese"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/1828519?u=d3fc31833341445738decb83f5901216b3aa7eda&amp;v=4&amp;s=50" /><div>djhoese</div></a>
-
-<a class='sg' href="https://github.com/OriolAbril"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/23738400?u=e12583539a9f95064bc8559c0669a2f00906bb41&amp;v=4&amp;s=50" /><div>OriolAbril</div></a>
-
-<a class='sg' href="https://github.com/JessicaS11"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/11756442?u=1892160f86980b5476cccf29a8cfb23734f8e57f&amp;v=4&amp;s=50" /><div>JessicaS11</div></a>
-
-<a class='sg' href="https://github.com/martinacantaro"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/6120897?u=7f9b17a3c7c19c1ebf0a0592674e3329ff823bc4&amp;v=4&amp;s=50" /><div>martinacantaro</div></a>
-
-<a class='sg' href="https://github.com/cmarmo"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/1662261?u=9f4dd33bc0960a68f257fbb159dfea792f6d3635&amp;v=4&amp;s=50" /><div>cmarmo</div></a>
-
-<a class='sg' href="https://github.com/francoisgoupil"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/98105626?u=f28e64da2cffc63d01c3c1c6029665664d2ceaa5&amp;v=4&amp;s=50" /><div>francoisgoupil</div></a>
-
-<a class='sg' href="https://github.com/Vincent-Maladiere"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/18560386?u=fa3384f926475fe2b64d1ab645c8688da76f4539&amp;v=4&amp;s=50" /><div>Vincent-Maladiere</div></a>
-
-<a class='sg' href="https://github.com/hturner"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/3343008?u=2edc6277c358b43898a00d005c77d76d7067ef56&amp;v=4&amp;s=50" /><div>hturner</div></a>
-
-<a class='sg' href="https://github.com/bmcfee"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/1190540?u=19b0b909f691178424a2cb69f379be4acdb16b42&amp;v=4&amp;s=50" /><div>bmcfee</div></a>
-
-<a class='sg' href="https://github.com/jackdeadman"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/6359535?u=d73943d0c082ec0ea59677989076beed0ebd9a12&amp;v=4&amp;s=50" /><div>jackdeadman</div></a>
-
-<a class='sg' href="https://github.com/tupui"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/23188539?u=64445b52dbf3f75de8006ed4264fdd2afaed97a3&amp;v=4&amp;s=50" /><div>tupui</div></a>
-
-<a class='sg' href="https://github.com/matthewfeickert"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/5142394?u=310e7999b329801a47ebc999c2243fc9f2b32434&amp;v=4&amp;s=50" /><div>matthewfeickert</div></a>
-
-<a class='sg' href="https://github.com/lagru"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/20140352?u=fa6debadd435c15847d1435c49753f349e2d3526&amp;v=4&amp;s=50" /><div>lagru</div></a>
-
-<a class='sg' href="https://github.com/fly51fly"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/128885?u=c94144933329ff1a4f4a0d21c29195dff512953f&amp;v=4&amp;s=50" /><div>fly51fly</div></a>
-
-<a class='sg' href="https://github.com/tituspijean"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/8769166?u=4e1a4576008b7250b85dd79ed16a467ca1513bf6&amp;v=4&amp;s=50" /><div>tituspijean</div></a>
-
-<a class='sg' href="https://github.com/pavithraes"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/33131404?u=e684323fc0c4522e65a2d5286c2fe0f97bfde018&amp;v=4&amp;s=50" /><div>pavithraes</div></a>
-
-<a class='sg' href="https://github.com/clstaudt"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/875194?u=46a92f9f837d0ba150ae0f1d91091dd2f4ebb6cc&amp;v=4&amp;s=50" /><div>clstaudt</div></a>
-
-<a class='sg' href="https://github.com/mraspaud"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/167802?u=00caff64d01875edccfebe6e682b462314dedfa3&amp;v=4&amp;s=50" /><div>mraspaud</div></a>
-
-<a class='sg' href="https://github.com/eeshwarantharan"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/31663430?u=1c97c365291070970f4668379271af074ce0e754&amp;v=4&amp;s=50" /><div>eeshwarantharan</div></a>
-
-<a class='sg' href="https://github.com/bskinn"><img width="50px", height='50px' src="https://avatars.githubusercontent.com/u/11325439?u=c1b22ac082236f5b84edef621e8d2a7d3692969f&amp;v=4&amp;s=50" /><div>bskinn</div></a>
-
-</div>
-
-<hr />
-<h3 id='more'>Maintainers in Open Source</h3>
-
-<p><a href="http://matthewrocklin.com/blog/2019/05/18/maintainer">The Role of a Maintainer</a> in  Open-Source is rarely about simply
-writing more code or getting more Pull-Requests. It is about properly caring, knowing how to say &ldquo;No&rdquo; and thinking
-about <strong>long term sustainability</strong>.</p>
-<p>Having a well-setup process, not too many tasks running at the same time, can be critical for Maintainers <strong>cognitive
-load</strong>, and <strong>mental health</strong>, as well as provide an <strong>easier environment for new contributors</strong>.</p>
-<p>When projects have fewer open pull requests, and well curated issues that are closed when not
-relevant it is easier to get timely reviews. As a result maintainers more easily avoid duplicate work, have less risk of code
-conflicts, and have an easier time finding potential duplicate bugs.</p>
-<p>Fewer tasks, and less stress also lead to <strong>friendlier interactions</strong>.</p>
-<p>Therefore, we encourage contributions to Closember. Work with your favorite maintainers, on your favorite repositories
-to decrease the number of opened issues and pull-requests for a <em>more dynamic</em>, better maintained, cleaner,
-leaner, environment and ecosystem.</p>
-<p>We also encourage you to avoid duplicate work by merging similar projects when relevant.</p>
-<h2>Join us to close issues and PRs</h2>
-<p>The tables below tracks multiple metrics to help you achieve goals. There are no good, or bad metrics, but it is fun to
-be able to compare.</p>
-<blockquote>
-<p>Please be careful about project guidelines and whether an issue should be closed,
-some projects close issues/PR that have not been commented on in a while, some others only close issues when it is
-resolved and a release has been made. If you are ever in doubt, ask.</p>
-</blockquote>
-<h2>Zeno Paradox</h2>
-<p>&hellip; you keep closing them but new ones keep opening. This is why issues or pull-requests opened during November do not
-count toward the total. This is not meant to disrupt the normal flow of work, but to encourage you to help maintainers
-take care of older issues and pull-requests.</p>
-
-
-<h3 id='help'>What should I do?</h3>
-
-
-<p>This is about <strong>you</strong> first; you need to be in a good mental state in order to help others. Personally I&rsquo;ll walk in circles for
-about 2 hours, tidy my desk, remove extra icons for my desktop, and also try to decrease my amount of
-unread emails. Like can I get under 1000? Another trick is to find a couple of things and click &ldquo;unsubscribe&rdquo;, it can be emails, or slack
-channels or un-follow people on twitter/facebook/instagram.</p>
-<p>Once you feel great about yourself go help others. What you just did for yourself here, you can now do for the
-maintainers of your favorites projects, and make those project better for everyone. </p>
-<h3>Maintainers: How to get ready:</h3>
-<ul>
-<li>
-<p>Speak with your co-maintainers/contributors, and let them know that you are considering participation. You can send your
-   community links to this page and requests help. You can organise groups that would be responsible for reviewing old
-   issues and seeing if they are still relevant, and setup guidelines on how to proceed during the month of November.</p>
-</li>
-<li>
-<p>Tag the repositories you control with the <code>closember</code> topic, they will be listed here automatically soon. If you can&rsquo;t or
-   don&rsquo;t want to for some reason, we can hard-code your repository in the list (see
-   <a href="https://github.com/openteamsinc/closember/issues/new">https://github.com/openteamsinc/closember/issues/new</a>).</p>
-</li>
-<li>
-<p>You can star our repository to show support as well.</p>
-</li>
-<li>
-<p>You may want to consider using the GitHub &ldquo;Triage&rdquo; role, this will let you give users the ability to open/close issues
-   without giving push rights. See <a href="https://docs.github.com/en/organizations/managing-access-to-your-organizations-repositories/repository-permission-levels-for-an-organization">this page on GitHub docs that list permissions of each
-   group</a></p>
-</li>
-</ul>
-<h3>How can I help other?</h3>
-<p>Great question! You often do not need to know how to code to contribute to Closember! For any project you
-contribute to, make sure to check their guidelines, and avoid eager closing of issues/PRs if that&rsquo;s not the desire of the
-maintainers. The following guide is intended to be adapted to <em>your skills</em> and <em>skills that can be of use for
-projects</em>.</p>
-<ul>
-<li><strong>find your favorite project</strong>, look at an old opened issue. Can you reproduce it ? Is it still relevant? If not, leave a
-   nice comment, like :<ul>
-<li>&ldquo;I tried to reproduce this issue, but on the latest released version it does not seem to be a problem anymore&rdquo;.</li>
-<li>&ldquo;This has actually been fixed by XXXX&rdquo;</li>
-<li>&ldquo;I think that this was an issues back in 2003, but no one uses ie6 anymore, I believe this can be closed.&rdquo;.</li>
-</ul>
-</li>
-</ul>
-<p>It will be less work for the maintainers, and they&rsquo;ll close the issue for you.</p>
-<ul>
-<li>
-<p>You can find the list of all issues <em>you have opened</em> at <a href="https://github.com/issues">https://github.com/issues</a>, do the same as above but <em>you can
-   close your own issues too</em>.</p>
-</li>
-<li>
-<p>Head to <a href="https://github.com/pulls">https://github.com/pulls</a>, this has all the pull-requests that you have submitted</p>
-</li>
-<li>Are they still relevant ?</li>
-<li>Close them if not, think about finishing them otherwise. </li>
-<li>
-<p>Maybe at least think about rebasing them and <code>git push --force-with-lease</code> to make sure the test passes on the latest
-     versions.</p>
-</li>
-<li>
-<p>Finish the Pull-Request of someone else: Many drive by contributors start pull-request but do not finish them. Maybe you can
-   take over? Once your version of the code is merged suggest that the old pull-request to be closed.</p>
-</li>
-</ul>
-<h3 id='add-topic'>How to be listed on this leader-board ?</h3>
-
-<p><strong>Add the <a href="https://github.com/topics/closember"><code>closember</code> topic</a></strong> to your repositories. Next time the site is updated you&rsquo;ll be listed.</p>
-<h3>Why is the score not changing ?</h3>
-<p>GitHub requests are cached for a few minutes, maybe 1 maybe 10, maybe 60, depend on my mood, or how much traffic we get. 
-It should update soon. But please relax. It&rsquo;s not a sprint, it&rsquo;s a marathon.</p>
-<h3>Show me this website code</h3>
-<p><a href="https://github.com/openteamsinc/closember">https://github.com/openteamsinc/closember</a> – please come close issues.</p>
-<h3>I closed all my issues / I really want to code&hellip;</h3>
-<p>Ok, fine, you want an excuse to write some code. Still you can do things the make maintainer life easier. A couple
-pet peeves of mine.</p>
-<ul>
-<li>Add Version number to your deprecation warnings, when I see a deprecation message I want to know since which version
-    it is deprecated and what&rsquo;s the replacement without having to go dive in the docs.</li>
-<li>Turn your deprecation warnings into error in your test suite, and make sure you are not using (when possible),
-    deprecated functionalities.</li>
-<li>Bump your minimal requirements for old libraries when you can. </li>
-<li>Knows more than one small project doing almost the same things ? Try to get maintainers to merge codebases /
-    collaborate.</li>
-<li>Cleanup your git stale branches, </li>
-<li>Delete forks of repositories you are not contributing to.</li>
-<li>create a system-wide <code>.gitignore</code> to not add <code>*.un~</code> and <code>.DS_Store</code> to every <code>.gitignore</code> project you contribute to.</li>
-</ul>
-<h3>I want to lean more about Open-Source</h3>
-<p>While we haven&rsquo;t read it yet, we recommend <a href="https://press.stripe.com/#working-in-public">Working in Public: The Making and Maintenance of Open Source
-Software</a> by <a href="https://nadiaeghbal.com/">Nadia Eghbal</a></p>
-<h3>Do I get a Lousy T-Shirt ?</h3>
-<p>Open-teams, FairOSS and Quansight are working on this, and how we can sponsors this better. Likely not this year, but
-we&rsquo;ll see for next. It is also a tough problem as not everyone can close any issue, so come talk to us if you want to
-find a way for user to claim having helped and maintainers to validate those claims.</p>
-<h2>Partners</h2>
-<p>Closember is currently sponsored by <a href="https://www.quansight.com/">Quansight</a>, <a href="https://faiross.org/">FairOSS</a> and
-<a href="https://openteams.com/landing/">OpenTeams</a>.</p>
-<div class=frame>
-    <a href='https://quansight.com'><img src='assets/quansight.jpg' alt="Quansight Logo"></a>
-</div>
-<div class=frame>
-    <a href='https://openteams.com/'><img src='assets/openteams.webp' alt="OpenTeams logo"></a>
-</div>
-<div class=frame>
-    <a href='https://faiross.org/'><img src='assets/faiross.png' alt="FairOSS logo"></a>
-</div>
-
-<h2>F.A.Q. with creator</h2>
-<ul>
-<li>Why did you create Closember ?</li>
-<li>It&rsquo;s something I have wanted to do for some time. I regularly participate to
-   <a href="https://hacktoberfest.digitalocean.com/">hacktoberfest</a> both as a user and maintainer. As a maintainer it can be a
-   deluge of PRs that can be tough to deal with. As a user, large number of PRs can be demotivating.</li>
-<li>Can you extend on what you mean with dealing will pull-requests ?</li>
-<li>Yes, even when you receive a well-meaning pull-request for a feature or bug-fix you want, those usually need some
-   polishing to adapt to the code guidelines, and get tests and documentation added. Many of those contributions
-   by &ldquo;drive by&rdquo; contributors are often unfinished, a bit like someone giving you flour, eggs, sugar, and a cake recipe
-   for your birthday.</li>
-<li>Can you expand on the demotivation you face as a user with many PRs? </li>
-<li>I occasionally contribute to repositories I&rsquo;m not familiar with. Some of those have more than a thousand PRs opened.
-   It is hard to be confident that one more PR, even perfect, will be noticed by maintainers, it&rsquo;s also unclear whether
-   someone is already doing the work, or if my work will conflict with someone else. I often have to reach out
-   personally to other maintainers – when I know them personally – to get noticed. This is definitely something which
-   can be difficult for a new contributor or less privileged people.</li>
-<li>Anything else ?
-   Chris <a href="https://twitter.com/choldgraf/status/1452701624095232000">pointed out</a> that
-   <a href="https://www.volunteeramnestyday.net/">https://www.volunteeramnestyday.net/</a> was also a good resource to look at.</li>
-</ul>
-<h2>Comments</h2>
-<!-- You can comments on this page using [utterances](https://utteranc.es/) (in progress) or directly on -->
-
-<p>Comments on the <a href="https://github.com/openteamsinc/closember/issues/6">Following GitHub Issue</a> will appear below.</p>
-<script src="https://utteranc.es/client.js"
-        repo="openteamsinc/closember"
-        issue-number="6"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>
-
-
-</section>
-<footer class='footer'>
-<section class=container>
-<p>Powered by <a href="https://pypi.org/project/Quart-Trio/">Quart</a>, <a href="https://trio.readthedocs.org">Trio</a>,
-<a href="https://asks.readthedocs.io/en/latest/">Asks</a> and <a href="https://jinja.palletsprojects.com/en/2.11.x/">Jinja2</a>.
-Theme from <a href="https://milligram.io/">milligram</a>. No JS. Hero illustration by <a href='https://twitter.com/irinafumarel'>Irina Fumarel</a>
-</br>
-<small>Remaining querries 624 - 31/10/2022 02:00:01. Interested in
-sponsoring ? <a href='mailto:connect@quansight.com'>email us</a></small>.</p>
-    <div id="vis"></div>
-    <div id="vis2"></div>
-
-    <script type="text/javascript">
-        var xx = {'Atri-Labs/atrilabs-engine': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'FCP-INDI/.github': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'FCP-INDI/C-PAC': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'FCP-INDI/C-PAC_GUI': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'FCP-INDI/app-C-PAC-brainlife.io': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'FCP-INDI/cpac': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'FCP-INDI/fcp-indi.github.io': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'MeeseeksBox/MeeseeksDev': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'P403n1x87/austin-vscode': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'PyCQA/astroid': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'PyCQA/pylint': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'Remi-Gau/eCobidas': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'WarwickRUG/wrug_website': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'arviz-devs/arviz': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'astropy/astroquery': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'ayan-biswas0412/AlgoDocs': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'bids-standard/bids-matlab': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'bids-standard/bids-starter-kit': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'codezonediitj/pydatastructs': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'cpp-lln-lab/bidsMReye': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'cpp-lln-lab/bidspm': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'datalad/datalad': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'datalad/datalad-catalog': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'datalad/datalad-dataverse': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'datalad/datalad-ebrains': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'datalad/datalad-gooey': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'datalad/datalad-metalad': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'datalad/datalad-next': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'datalad/datalad-osf': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'datalad/datalad-ukbiobank': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'datalad/datalad-xnat': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'eX-Mech/pymech': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'icesat2py/icepyx': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'ipython/ipykernel': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'ipython/ipython': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'ipython/traitlets': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'jupyter/notebook': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'jupyter/papyri': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'kailashchoudhary11/imgman': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'librosa/librosa': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'openteamsinc/closember': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'physiopy/phys2bids': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'physiopy/phys2denoise': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'poliastro/poliastro': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'psychoinformatics-de/datalad-debian': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'pygfx/pygfx': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'pygfx/wgpu-py': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'pymc-devs/pymc-examples': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'pytroll/pygac-fdr': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'pytroll/pyorbital': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'pytroll/pyresample': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'pytroll/pyspectral': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'pytroll/satpy': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'r-devel/rdevguide': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'radis/radis': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'rse-asia/OLS-4': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'rse-asia/RSE_Asia': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'scikit-hep/pyhf': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'scikit-image/scikit-image': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'scipy/scipy': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'snek5000/snek5000': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'spyder-ide/qtawesome': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'spyder-ide/qtpy': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'spyder-ide/spyder': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'timofurrer/awesome-asyncio': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'tqdm/tqdm': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}], 'vispy/vispy': [{'date': '2022-01', 'Issues': 0, 'PR': 0}, {'date': '2022-02', 'Issues': 0, 'PR': 0}, {'date': '2022-03', 'Issues': 0, 'PR': 0}, {'date': '2022-04', 'Issues': 0, 'PR': 0}, {'date': '2022-05', 'Issues': 0, 'PR': 0}, {'date': '2022-06', 'Issues': 0, 'PR': 0}, {'date': '2022-07', 'Issues': 0, 'PR': 0}, {'date': '2022-08', 'Issues': 0, 'PR': 0}, {'date': '2022-09', 'Issues': 0, 'PR': 0}, {'date': '2022-10', 'Issues': 0, 'PR': 0}, {'date': '2022-11', 'Issues': 0, 'PR': 0}, {'date': '2022-12', 'Issues': 0, 'PR': 0}]};
-      var yourVlSpec = {
-        "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-        "description": "Stock prices of 5 Tech Companies over Time.",
-        "title": "ISSUES",
-        "data": {
-                "values": [
-        //            {"date": "2021-01", "Issue": 21, "status":"open"},
-        //            {"date": "2021-02", "Issue": 22, "status":"open"},
-        //            {"date": "2021-03", "Issue": 23, "status":"open"},
-        //            {"date": "2021-04", "Issue": 23, "status":"open"},
-        //            {"date": "2021-01", "Issue": 25, "status":"close"},
-        //            {"date": "2021-02", "Issue": 18, "status":"close"},
-        //            {"date": "2021-03", "Issue": 16, "status":"close"},
-        //            {"date": "2021-04", "Issue": 37, "status":"close"}
-                ]
-                },
-        "mark": {
-            "type": "line",
-            "point": {
-            "filled": false,
-            "fill": "white"
-            }
-        },
-        "encoding": {
-            "x": {"timeUnit": "month", "field": "date"},
-            "y": {"field": "Issues", "type": "quantitative"},
-            //"color": {"field": "status", "type": "nominal"}
-        }
-        };
-
-
-      var s2 = {...yourVlSpec};
-      s2['title'] = 'Issues';
-      s2['data']['values'] = xx['ipython/ipython']
-      //vegaEmbed('#vis', s2);
-
-      var s3 = {...yourVlSpec};
-      s3['title'] = 'Pull Requests';
-      s3['data']['values'] = xx['ipython/ipython'];
-      s3['encoding']= {
-            "x": {"timeUnit": "month", "field": "date"},
-            "y": {"field": "PR", "type": "quantitative"},
-            //"color": {"field": "status", "type": "nominal"}
-        };
-      //vegaEmbed('#vis2', s3);
-    </script>
-<script async defer src="https://buttons.github.io/buttons.js"></script>
-</section>
-</footer>
-</main>
+  </div>
+      <h2>Closember 2022 Is Here</h2>
+
+      <h3><em>
+        Hacktoberfest has officially ended—let’s start closing some issues
+        while supporting open source maintainers
+      </em></h3>
+
+      <p style="text-align: center;">
+        Closember is a month-long initiative for maintainers, contributors, and open source enthusiasts run by <a href="https://quansight.com" target="_blank">Quansight</a>,
+        <a href="https://openteams.com" target="_blank">OpenTeams</a>, and
+        <a href="https://faiross.org" target="_blank">FairOSS</a>.
+        The goal of Closember is to encourage better and healthier open source community practices while raising awareness about maintainer burnout.
+      </p>
+
+      <p>&nbsp;</p>
+
+    </section></header>
+
+    <h2 id="why-closember">Why Closember?</h2>
+
+    <p>
+      Closember was created as a companion to Hacktoberfest, an annual event that encourages contributions to open source projects, especially by newer contributors.
+    </p>
+    <p>
+      A big motivation for Closember was in response to the unexpected consequences downstream of early Hacktoberfests, where mostly well-meaning, but inexperienced contributors overloaded projects with low-quality GitHub pull requests (PRs) in order to get swag and rewards. The result was massive amounts of extra work for project maintainers to clean up in the aftermath.
+    </p>
+    <p>
+      Closember emphasizes that participating in open source is a two-way street between maintainers and contributors. Maintaining projects requires significant time and effort, and that work needs to be noticed, valued, and validated. However, best practices for project maintenance and maintainer self-care aren’t always obvious. Closember raises awareness of this in order to support the community as a whole.
+    </p>
+
+    <div class="back-to-top">
+      <a href="#nav">(back to top)</a>
+    </div>
+
+    <h2 id="how-to-participate">How to Participate</h2>
+
+    <p>
+      Get ready to choose your own Closember adventure—there’s no one way to participate.
+    </p>
+    <p>
+      If you’ve never used GitHub before, your first step is going to be
+      <a href="https://github.com/signup" target="_blank">signing up for a free account</a>. While there are other collaborative <a href="https://git-scm.com/" target="_blank">git</a>-based development services out there—<a href="https://gitlab.com" target="_blank">GitLab</a> and <a href="https://bitbucket.org/" target="_blank">Atlassian Bitbucket</a> are two of the most popular—Closember is centered on GitHub.
+    </p>
+    <p>
+      If you’ve opened issues or PRs on projects in the past, you can start by taking a look at your own GitHub <a href="https://github.com/issues" target="_blank">issues</a> and <a href="https://github.com/pulls" target="_blank">PRs</a> to see if any of them are outdated or have already been fixed. After that, start browsing projects! Take a look at your favorite projects and see if they’ve been tagged with <code>closember</code>, or browse the <a href="https://github.com/topics/closember" target="_blank">list of <code>closember</code> projects</a>.
+    </p>
+    <p>
+      Once you’ve picked a project, engage! Check out the project’s repository to see if they’ve posted instructions for the help they’re looking for during Closember—if they have, follow them.
+    </p>
+    <p>
+      If not, then browse their issues and PRs to see if any are stale or need action from their creator, and comment on them to start the conversation again. Sometimes, discussion will happen and move the issue/PR forward. Other times, no one will respond, and then you can recommend to the project maintainers that it can be closed.
+    </p>
+    <p>
+      If you’re familiar with contribution workflows, continuous integration, bots, or other tools to improve project maintainability, create an issue and ask the project maintainers if they’d be interested in this sort of contribution.
+    </p>
+    <p>
+      To stay in the loop throughout Closember, follow <a href="https://twitter.com/ClosemberDev" target="_blank">@ClosemberDev</a> & use the <a href="https://twitter.com/hashtag/closember" target="_blank">#Closember</a> hashtag on Twitter, and watch the <a href="https://github.com/openteamsinc/closember/issues" target="_blank">Closember repo</a> on GitHub:
+    </p>
+
+    <div style="text-align: center;">
+      <img src="assets/watch_repo.png" width="70%"><br /><br />
+    </div>
+
+    <div class="back-to-top">
+      <a href="#nav">(back to top)</a>
+    </div>
+
+    <h2 id="for-maintainers">For Maintainers: How to Get Ready</h2>
+
+    <p>
+      All right, maintainers—so you have a project that could use some maintainability help, and you’d like to get in on the Closember action. What should you do to get ready?
+    </p>
+    <p>
+      Well, first of all, keep in mind that the most basic point of Closember is maintainer health and well-being. So, take care of yourself first, whatever that means ... diet, exercise, sleep, relaxation ... only you know what you need. Another thing to consider is that working with Closember contributions <em>will</em> involve extra time and effort on your part. So, even if your project could use some help, the best thing for you <em>might</em> be not to participate!
+    </p>
+    <p>
+      If you decide to jump in, though, the biggest thing you need to do before tagging your repo with <code>closember</code> is to decide what kind of help you want: triaging, infrastructure, automation, project restructuring/refactoring…. There are lots of possibilities! Take stock of your project and identify one or two (or more!) areas where it would most benefit from some maintenance help.
+    </p>
+    <p>
+      Then, edit your README to let Closember visitors know what sort of help you’re looking for, tag your repo with <code>closember</code>, and engage with the community as they come by! You could even take some extra time and triage/close a few issues or PRs yourself, if the mood strikes.
+    </p>
+
+    <div class="back-to-top">
+      <a href="#nav">(back to top)</a>
+    </div>
+
+    <h2 id="closeboards">Closeboards</h2>
+
+    <p>
+      As we’ve described above, Closember is mainly about the health of open source maintainers and projects. So, while we’ve defined some Closember success metrics for ourselves, these metrics aren’t the be-all and end-all. Each open source community and project can have its own goals and metrics, which fit its size, philosophy, etc.—part of the fun and purpose of Closember is the discussion around what it means for a community to be ‘healthy.’ For example, you have to be aware of the possibility for ‘<a href="https://en.wikipedia.org/wiki/Normalization_of_deviance" target="_blank">normalization of deviance</a>’, where even though a practice is accepted, it’s still unhealthy.
+    </p>
+    <p>
+      The metrics we’re calculating here are focused on closing old issues and PRs, since that’s something that’s pretty easy to quantify. Again, there are no objectively good or bad metrics—these are just the ones we’ve chosen to present. Our metrics are calculated for each participating repository, and are:
+    </p>
+    <ol>
+      <li>Total issues closed during Closember, which were opened before Closember</li>
+      <li>Total issues opened before Closember, which are not yet closed</li>
+      <li>Overall oldest issues closed during Closember</li>
+    </ol>
+    <blockquote>
+      <em>Remember, remember, to close a PR in November.</em> <br />
+      <br />
+      &mdash; A Maintainer
+    </blockquote>
+    <p>
+      To the numbers!
+    </p>
+    <p>
+      Overall, of the <span class="gray-glow">13082</span> issues and PRs open as of the start of Closember, <span class="green-glow">0</span> have been closed and <span class="red-glow">13082</span> are still open.
+    </p>
+
+    <h3 id="closed-issues-prs">Closed Issues/PRs</h3>
+
+    <p style="font-style: italic">
+      Participating repos with the most pre-Closember issues & PRs that have been closed during Closember.
+    </p>
+
+    <table class='c1'>
+      <tr>
+        <th>#</th>
+        <th>Repository</th>
+        <th>Closed Issues</th>
+        <th>Closed/Merged PRs</th>
+      </tr>
+    
+      <tr>
+        <td>1</td>
+        <td><a href='https://github.com/vispy/vispy'>vispy/vispy<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>2</td>
+        <td><a href='https://github.com/tqdm/tqdm'>tqdm/tqdm<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>3</td>
+        <td><a href='https://github.com/timofurrer/awesome-asyncio'>timofurrer/awesome-asyncio<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>4</td>
+        <td><a href='https://github.com/spyder-ide/spyder'>spyder-ide/spyder<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>5</td>
+        <td><a href='https://github.com/spyder-ide/qtpy'>spyder-ide/qtpy<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>6</td>
+        <td><a href='https://github.com/spyder-ide/qtawesome'>spyder-ide/qtawesome<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>7</td>
+        <td><a href='https://github.com/snek5000/snek5000'>snek5000/snek5000<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>8</td>
+        <td><a href='https://github.com/scipy/scipy'>scipy/scipy<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>9</td>
+        <td><a href='https://github.com/scikit-image/scikit-image'>scikit-image/scikit-image<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>10</td>
+        <td><a href='https://github.com/scikit-hep/pyhf'>scikit-hep/pyhf<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>11</td>
+        <td><a href='https://github.com/rse-asia/RSE_Asia'>rse-asia/RSE_Asia<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>12</td>
+        <td><a href='https://github.com/rse-asia/OLS-4'>rse-asia/OLS-4<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>13</td>
+        <td><a href='https://github.com/radis/radis'>radis/radis<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>14</td>
+        <td><a href='https://github.com/r-devel/rdevguide'>r-devel/rdevguide<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>15</td>
+        <td><a href='https://github.com/pytroll/satpy'>pytroll/satpy<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>16</td>
+        <td><a href='https://github.com/pytroll/pyspectral'>pytroll/pyspectral<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>17</td>
+        <td><a href='https://github.com/pytroll/pyresample'>pytroll/pyresample<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>18</td>
+        <td><a href='https://github.com/pytroll/pyorbital'>pytroll/pyorbital<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>19</td>
+        <td><a href='https://github.com/pytroll/pygac-fdr'>pytroll/pygac-fdr<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>20</td>
+        <td><a href='https://github.com/pymc-devs/pymc-examples'>pymc-devs/pymc-examples<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>21</td>
+        <td><a href='https://github.com/pygfx/wgpu-py'>pygfx/wgpu-py<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>22</td>
+        <td><a href='https://github.com/pygfx/pygfx'>pygfx/pygfx<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>23</td>
+        <td><a href='https://github.com/psychoinformatics-de/datalad-debian'>psychoinformatics-de/datalad-debian<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>24</td>
+        <td><a href='https://github.com/poliastro/poliastro'>poliastro/poliastro<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>25</td>
+        <td><a href='https://github.com/physiopy/phys2denoise'>physiopy/phys2denoise<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>26</td>
+        <td><a href='https://github.com/physiopy/phys2bids'>physiopy/phys2bids<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>27</td>
+        <td><a href='https://github.com/openteamsinc/closember'>openteamsinc/closember<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>28</td>
+        <td><a href='https://github.com/librosa/librosa'>librosa/librosa<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>29</td>
+        <td><a href='https://github.com/kailashchoudhary11/imgman'>kailashchoudhary11/imgman<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>30</td>
+        <td><a href='https://github.com/jupyter/papyri'>jupyter/papyri<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>31</td>
+        <td><a href='https://github.com/jupyter/notebook'>jupyter/notebook<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>32</td>
+        <td><a href='https://github.com/ipython/traitlets'>ipython/traitlets<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>33</td>
+        <td><a href='https://github.com/ipython/ipython'>ipython/ipython<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>34</td>
+        <td><a href='https://github.com/ipython/ipykernel'>ipython/ipykernel<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>35</td>
+        <td><a href='https://github.com/icesat2py/icepyx'>icesat2py/icepyx<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>36</td>
+        <td><a href='https://github.com/eX-Mech/pymech'>eX-Mech/pymech<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>37</td>
+        <td><a href='https://github.com/datalad/datalad-xnat'>datalad/datalad-xnat<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>38</td>
+        <td><a href='https://github.com/datalad/datalad-ukbiobank'>datalad/datalad-ukbiobank<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>39</td>
+        <td><a href='https://github.com/datalad/datalad-osf'>datalad/datalad-osf<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>40</td>
+        <td><a href='https://github.com/datalad/datalad-next'>datalad/datalad-next<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>41</td>
+        <td><a href='https://github.com/datalad/datalad-metalad'>datalad/datalad-metalad<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>42</td>
+        <td><a href='https://github.com/datalad/datalad-gooey'>datalad/datalad-gooey<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>43</td>
+        <td><a href='https://github.com/datalad/datalad-ebrains'>datalad/datalad-ebrains<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>44</td>
+        <td><a href='https://github.com/datalad/datalad-dataverse'>datalad/datalad-dataverse<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>45</td>
+        <td><a href='https://github.com/datalad/datalad-catalog'>datalad/datalad-catalog<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>46</td>
+        <td><a href='https://github.com/datalad/datalad'>datalad/datalad<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>47</td>
+        <td><a href='https://github.com/cpp-lln-lab/bidspm'>cpp-lln-lab/bidspm<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>48</td>
+        <td><a href='https://github.com/cpp-lln-lab/bidsMReye'>cpp-lln-lab/bidsMReye<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>49</td>
+        <td><a href='https://github.com/codezonediitj/pydatastructs'>codezonediitj/pydatastructs<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>50</td>
+        <td><a href='https://github.com/bids-standard/bids-starter-kit'>bids-standard/bids-starter-kit<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>51</td>
+        <td><a href='https://github.com/bids-standard/bids-matlab'>bids-standard/bids-matlab<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>52</td>
+        <td><a href='https://github.com/ayan-biswas0412/AlgoDocs'>ayan-biswas0412/AlgoDocs<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>53</td>
+        <td><a href='https://github.com/astropy/astroquery'>astropy/astroquery<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>54</td>
+        <td><a href='https://github.com/arviz-devs/arviz'>arviz-devs/arviz<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>55</td>
+        <td><a href='https://github.com/WarwickRUG/wrug_website'>WarwickRUG/wrug_website<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>56</td>
+        <td><a href='https://github.com/Remi-Gau/eCobidas'>Remi-Gau/eCobidas<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>57</td>
+        <td><a href='https://github.com/PyCQA/pylint'>PyCQA/pylint<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>58</td>
+        <td><a href='https://github.com/PyCQA/astroid'>PyCQA/astroid<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>59</td>
+        <td><a href='https://github.com/P403n1x87/austin-vscode'>P403n1x87/austin-vscode<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>60</td>
+        <td><a href='https://github.com/MeeseeksBox/MeeseeksDev'>MeeseeksBox/MeeseeksDev<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>61</td>
+        <td><a href='https://github.com/FCP-INDI/fcp-indi.github.io'>FCP-INDI/fcp-indi.github.io<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>62</td>
+        <td><a href='https://github.com/FCP-INDI/cpac'>FCP-INDI/cpac<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>63</td>
+        <td><a href='https://github.com/FCP-INDI/app-C-PAC-brainlife.io'>FCP-INDI/app-C-PAC-brainlife.io<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>64</td>
+        <td><a href='https://github.com/FCP-INDI/C-PAC_GUI'>FCP-INDI/C-PAC_GUI<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>65</td>
+        <td><a href='https://github.com/FCP-INDI/C-PAC'>FCP-INDI/C-PAC<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>66</td>
+        <td><a href='https://github.com/FCP-INDI/.github'>FCP-INDI/.github<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+      <tr>
+        <td>67</td>
+        <td><a href='https://github.com/Atri-Labs/atrilabs-engine'>Atri-Labs/atrilabs-engine<a></td>
+        <td class='green-glow'>0</td>
+        <td class='green-glow'>0</td>
+      </tr>
+    
+    </table>
+
+    <h3 id="open-issues-prs">Open Issues/PRs</h3>
+
+    <p style="font-style: italic">
+      Participating repos with the least remaining pre-Closember issues & PRs still open.
+    </p>
+
+    <table class='c2'>
+      <tr>
+        <th>#</th>
+        <th>Repository</th>
+        <th>Open Issues</th>
+        <th>Open PRs</th>
+      </tr>
+      
+        <tr>
+          <td>1 </td>
+          <td><a href='https://github.com/FCP-INDI/.github'>FCP-INDI/.github<a></td>
+          <td class='red-glow'>0</td>
+          <td class='red-glow'>0</td>
+        </tr>
+      
+        <tr>
+          <td>2 </td>
+          <td><a href='https://github.com/rse-asia/OLS-4'>rse-asia/OLS-4<a></td>
+          <td class='red-glow'>5</td>
+          <td class='red-glow'>0</td>
+        </tr>
+      
+        <tr>
+          <td>3 </td>
+          <td><a href='https://github.com/P403n1x87/austin-vscode'>P403n1x87/austin-vscode<a></td>
+          <td class='red-glow'>6</td>
+          <td class='red-glow'>0</td>
+        </tr>
+      
+        <tr>
+          <td>4 </td>
+          <td><a href='https://github.com/FCP-INDI/app-C-PAC-brainlife.io'>FCP-INDI/app-C-PAC-brainlife.io<a></td>
+          <td class='red-glow'>7</td>
+          <td class='red-glow'>0</td>
+        </tr>
+      
+        <tr>
+          <td>5 </td>
+          <td><a href='https://github.com/WarwickRUG/wrug_website'>WarwickRUG/wrug_website<a></td>
+          <td class='red-glow'>9</td>
+          <td class='red-glow'>0</td>
+        </tr>
+      
+        <tr>
+          <td>6 </td>
+          <td><a href='https://github.com/timofurrer/awesome-asyncio'>timofurrer/awesome-asyncio<a></td>
+          <td class='red-glow'>0</td>
+          <td class='red-glow'>9</td>
+        </tr>
+      
+        <tr>
+          <td>7 </td>
+          <td><a href='https://github.com/cpp-lln-lab/bidsMReye'>cpp-lln-lab/bidsMReye<a></td>
+          <td class='red-glow'>11</td>
+          <td class='red-glow'>0</td>
+        </tr>
+      
+        <tr>
+          <td>8 </td>
+          <td><a href='https://github.com/openteamsinc/closember'>openteamsinc/closember<a></td>
+          <td class='red-glow'>11</td>
+          <td class='red-glow'>0</td>
+        </tr>
+      
+        <tr>
+          <td>9 </td>
+          <td><a href='https://github.com/pytroll/pygac-fdr'>pytroll/pygac-fdr<a></td>
+          <td class='red-glow'>9</td>
+          <td class='red-glow'>2</td>
+        </tr>
+      
+        <tr>
+          <td>10 </td>
+          <td><a href='https://github.com/datalad/datalad-ebrains'>datalad/datalad-ebrains<a></td>
+          <td class='red-glow'>10</td>
+          <td class='red-glow'>2</td>
+        </tr>
+      
+        <tr>
+          <td>11 </td>
+          <td><a href='https://github.com/datalad/datalad-ukbiobank'>datalad/datalad-ukbiobank<a></td>
+          <td class='red-glow'>13</td>
+          <td class='red-glow'>0</td>
+        </tr>
+      
+        <tr>
+          <td>12 </td>
+          <td><a href='https://github.com/pygfx/wgpu-py'>pygfx/wgpu-py<a></td>
+          <td class='red-glow'>12</td>
+          <td class='red-glow'>1</td>
+        </tr>
+      
+        <tr>
+          <td>13 </td>
+          <td><a href='https://github.com/spyder-ide/qtawesome'>spyder-ide/qtawesome<a></td>
+          <td class='red-glow'>11</td>
+          <td class='red-glow'>2</td>
+        </tr>
+      
+        <tr>
+          <td>14 </td>
+          <td><a href='https://github.com/FCP-INDI/cpac'>FCP-INDI/cpac<a></td>
+          <td class='red-glow'>13</td>
+          <td class='red-glow'>1</td>
+        </tr>
+      
+        <tr>
+          <td>15 </td>
+          <td><a href='https://github.com/datalad/datalad-xnat'>datalad/datalad-xnat<a></td>
+          <td class='red-glow'>13</td>
+          <td class='red-glow'>1</td>
+        </tr>
+      
+        <tr>
+          <td>16 </td>
+          <td><a href='https://github.com/rse-asia/RSE_Asia'>rse-asia/RSE_Asia<a></td>
+          <td class='red-glow'>12</td>
+          <td class='red-glow'>2</td>
+        </tr>
+      
+        <tr>
+          <td>17 </td>
+          <td><a href='https://github.com/kailashchoudhary11/imgman'>kailashchoudhary11/imgman<a></td>
+          <td class='red-glow'>13</td>
+          <td class='red-glow'>3</td>
+        </tr>
+      
+        <tr>
+          <td>18 </td>
+          <td><a href='https://github.com/ayan-biswas0412/AlgoDocs'>ayan-biswas0412/AlgoDocs<a></td>
+          <td class='red-glow'>13</td>
+          <td class='red-glow'>4</td>
+        </tr>
+      
+        <tr>
+          <td>19 </td>
+          <td><a href='https://github.com/datalad/datalad-next'>datalad/datalad-next<a></td>
+          <td class='red-glow'>15</td>
+          <td class='red-glow'>2</td>
+        </tr>
+      
+        <tr>
+          <td>20 </td>
+          <td><a href='https://github.com/eX-Mech/pymech'>eX-Mech/pymech<a></td>
+          <td class='red-glow'>14</td>
+          <td class='red-glow'>3</td>
+        </tr>
+      
+        <tr>
+          <td>21 </td>
+          <td><a href='https://github.com/spyder-ide/qtpy'>spyder-ide/qtpy<a></td>
+          <td class='red-glow'>12</td>
+          <td class='red-glow'>5</td>
+        </tr>
+      
+        <tr>
+          <td>22 </td>
+          <td><a href='https://github.com/datalad/datalad-osf'>datalad/datalad-osf<a></td>
+          <td class='red-glow'>17</td>
+          <td class='red-glow'>1</td>
+        </tr>
+      
+        <tr>
+          <td>23 </td>
+          <td><a href='https://github.com/pytroll/pyspectral'>pytroll/pyspectral<a></td>
+          <td class='red-glow'>19</td>
+          <td class='red-glow'>1</td>
+        </tr>
+      
+        <tr>
+          <td>24 </td>
+          <td><a href='https://github.com/bids-standard/bids-starter-kit'>bids-standard/bids-starter-kit<a></td>
+          <td class='red-glow'>20</td>
+          <td class='red-glow'>2</td>
+        </tr>
+      
+        <tr>
+          <td>25 </td>
+          <td><a href='https://github.com/physiopy/phys2denoise'>physiopy/phys2denoise<a></td>
+          <td class='red-glow'>16</td>
+          <td class='red-glow'>6</td>
+        </tr>
+      
+        <tr>
+          <td>26 </td>
+          <td><a href='https://github.com/pytroll/pyorbital'>pytroll/pyorbital<a></td>
+          <td class='red-glow'>16</td>
+          <td class='red-glow'>7</td>
+        </tr>
+      
+        <tr>
+          <td>27 </td>
+          <td><a href='https://github.com/datalad/datalad-dataverse'>datalad/datalad-dataverse<a></td>
+          <td class='red-glow'>21</td>
+          <td class='red-glow'>3</td>
+        </tr>
+      
+        <tr>
+          <td>28 </td>
+          <td><a href='https://github.com/bids-standard/bids-matlab'>bids-standard/bids-matlab<a></td>
+          <td class='red-glow'>28</td>
+          <td class='red-glow'>2</td>
+        </tr>
+      
+        <tr>
+          <td>29 </td>
+          <td><a href='https://github.com/snek5000/snek5000'>snek5000/snek5000<a></td>
+          <td class='red-glow'>27</td>
+          <td class='red-glow'>4</td>
+        </tr>
+      
+        <tr>
+          <td>30 </td>
+          <td><a href='https://github.com/MeeseeksBox/MeeseeksDev'>MeeseeksBox/MeeseeksDev<a></td>
+          <td class='red-glow'>31</td>
+          <td class='red-glow'>2</td>
+        </tr>
+      
+        <tr>
+          <td>31 </td>
+          <td><a href='https://github.com/r-devel/rdevguide'>r-devel/rdevguide<a></td>
+          <td class='red-glow'>29</td>
+          <td class='red-glow'>5</td>
+        </tr>
+      
+        <tr>
+          <td>32 </td>
+          <td><a href='https://github.com/FCP-INDI/C-PAC_GUI'>FCP-INDI/C-PAC_GUI<a></td>
+          <td class='red-glow'>32</td>
+          <td class='red-glow'>6</td>
+        </tr>
+      
+        <tr>
+          <td>33 </td>
+          <td><a href='https://github.com/psychoinformatics-de/datalad-debian'>psychoinformatics-de/datalad-debian<a></td>
+          <td class='red-glow'>35</td>
+          <td class='red-glow'>4</td>
+        </tr>
+      
+        <tr>
+          <td>34 </td>
+          <td><a href='https://github.com/Remi-Gau/eCobidas'>Remi-Gau/eCobidas<a></td>
+          <td class='red-glow'>40</td>
+          <td class='red-glow'>0</td>
+        </tr>
+      
+        <tr>
+          <td>35 </td>
+          <td><a href='https://github.com/datalad/datalad-catalog'>datalad/datalad-catalog<a></td>
+          <td class='red-glow'>39</td>
+          <td class='red-glow'>1</td>
+        </tr>
+      
+        <tr>
+          <td>36 </td>
+          <td><a href='https://github.com/librosa/librosa'>librosa/librosa<a></td>
+          <td class='red-glow'>39</td>
+          <td class='red-glow'>5</td>
+        </tr>
+      
+        <tr>
+          <td>37 </td>
+          <td><a href='https://github.com/datalad/datalad-gooey'>datalad/datalad-gooey<a></td>
+          <td class='red-glow'>43</td>
+          <td class='red-glow'>2</td>
+        </tr>
+      
+        <tr>
+          <td>38 </td>
+          <td><a href='https://github.com/physiopy/phys2bids'>physiopy/phys2bids<a></td>
+          <td class='red-glow'>42</td>
+          <td class='red-glow'>7</td>
+        </tr>
+      
+        <tr>
+          <td>39 </td>
+          <td><a href='https://github.com/jupyter/papyri'>jupyter/papyri<a></td>
+          <td class='red-glow'>50</td>
+          <td class='red-glow'>1</td>
+        </tr>
+      
+        <tr>
+          <td>40 </td>
+          <td><a href='https://github.com/icesat2py/icepyx'>icesat2py/icepyx<a></td>
+          <td class='red-glow'>44</td>
+          <td class='red-glow'>9</td>
+        </tr>
+      
+        <tr>
+          <td>41 </td>
+          <td><a href='https://github.com/pygfx/pygfx'>pygfx/pygfx<a></td>
+          <td class='red-glow'>53</td>
+          <td class='red-glow'>5</td>
+        </tr>
+      
+        <tr>
+          <td>42 </td>
+          <td><a href='https://github.com/cpp-lln-lab/bidspm'>cpp-lln-lab/bidspm<a></td>
+          <td class='red-glow'>61</td>
+          <td class='red-glow'>2</td>
+        </tr>
+      
+        <tr>
+          <td>43 </td>
+          <td><a href='https://github.com/radis/radis'>radis/radis<a></td>
+          <td class='red-glow'>59</td>
+          <td class='red-glow'>4</td>
+        </tr>
+      
+        <tr>
+          <td>44 </td>
+          <td><a href='https://github.com/codezonediitj/pydatastructs'>codezonediitj/pydatastructs<a></td>
+          <td class='red-glow'>58</td>
+          <td class='red-glow'>14</td>
+        </tr>
+      
+        <tr>
+          <td>45 </td>
+          <td><a href='https://github.com/FCP-INDI/fcp-indi.github.io'>FCP-INDI/fcp-indi.github.io<a></td>
+          <td class='red-glow'>68</td>
+          <td class='red-glow'>7</td>
+        </tr>
+      
+        <tr>
+          <td>46 </td>
+          <td><a href='https://github.com/pytroll/pyresample'>pytroll/pyresample<a></td>
+          <td class='red-glow'>79</td>
+          <td class='red-glow'>11</td>
+        </tr>
+      
+        <tr>
+          <td>47 </td>
+          <td><a href='https://github.com/datalad/datalad-metalad'>datalad/datalad-metalad<a></td>
+          <td class='red-glow'>96</td>
+          <td class='red-glow'>1</td>
+        </tr>
+      
+        <tr>
+          <td>48 </td>
+          <td><a href='https://github.com/Atri-Labs/atrilabs-engine'>Atri-Labs/atrilabs-engine<a></td>
+          <td class='red-glow'>95</td>
+          <td class='red-glow'>3</td>
+        </tr>
+      
+        <tr>
+          <td>49 </td>
+          <td><a href='https://github.com/ipython/traitlets'>ipython/traitlets<a></td>
+          <td class='red-glow'>91</td>
+          <td class='red-glow'>9</td>
+        </tr>
+      
+        <tr>
+          <td>50 </td>
+          <td><a href='https://github.com/poliastro/poliastro'>poliastro/poliastro<a></td>
+          <td class='red-glow'>96</td>
+          <td class='red-glow'>24</td>
+        </tr>
+      
+        <tr>
+          <td>51 </td>
+          <td><a href='https://github.com/pymc-devs/pymc-examples'>pymc-devs/pymc-examples<a></td>
+          <td class='red-glow'>111</td>
+          <td class='red-glow'>16</td>
+        </tr>
+      
+        <tr>
+          <td>52 </td>
+          <td><a href='https://github.com/PyCQA/astroid'>PyCQA/astroid<a></td>
+          <td class='red-glow'>147</td>
+          <td class='red-glow'>25</td>
+        </tr>
+      
+        <tr>
+          <td>53 </td>
+          <td><a href='https://github.com/arviz-devs/arviz'>arviz-devs/arviz<a></td>
+          <td class='red-glow'>164</td>
+          <td class='red-glow'>12</td>
+        </tr>
+      
+        <tr>
+          <td>54 </td>
+          <td><a href='https://github.com/ipython/ipykernel'>ipython/ipykernel<a></td>
+          <td class='red-glow'>217</td>
+          <td class='red-glow'>22</td>
+        </tr>
+      
+        <tr>
+          <td>55 </td>
+          <td><a href='https://github.com/vispy/vispy'>vispy/vispy<a></td>
+          <td class='red-glow'>278</td>
+          <td class='red-glow'>34</td>
+        </tr>
+      
+        <tr>
+          <td>56 </td>
+          <td><a href='https://github.com/FCP-INDI/C-PAC'>FCP-INDI/C-PAC<a></td>
+          <td class='red-glow'>348</td>
+          <td class='red-glow'>11</td>
+        </tr>
+      
+        <tr>
+          <td>57 </td>
+          <td><a href='https://github.com/scikit-hep/pyhf'>scikit-hep/pyhf<a></td>
+          <td class='red-glow'>336</td>
+          <td class='red-glow'>31</td>
+        </tr>
+      
+        <tr>
+          <td>58 </td>
+          <td><a href='https://github.com/tqdm/tqdm'>tqdm/tqdm<a></td>
+          <td class='red-glow'>301</td>
+          <td class='red-glow'>85</td>
+        </tr>
+      
+        <tr>
+          <td>59 </td>
+          <td><a href='https://github.com/pytroll/satpy'>pytroll/satpy<a></td>
+          <td class='red-glow'>317</td>
+          <td class='red-glow'>92</td>
+        </tr>
+      
+        <tr>
+          <td>60 </td>
+          <td><a href='https://github.com/astropy/astroquery'>astropy/astroquery<a></td>
+          <td class='red-glow'>420</td>
+          <td class='red-glow'>54</td>
+        </tr>
+      
+        <tr>
+          <td>61 </td>
+          <td><a href='https://github.com/datalad/datalad'>datalad/datalad<a></td>
+          <td class='red-glow'>550</td>
+          <td class='red-glow'>13</td>
+        </tr>
+      
+        <tr>
+          <td>62 </td>
+          <td><a href='https://github.com/scikit-image/scikit-image'>scikit-image/scikit-image<a></td>
+          <td class='red-glow'>441</td>
+          <td class='red-glow'>200</td>
+        </tr>
+      
+        <tr>
+          <td>63 </td>
+          <td><a href='https://github.com/PyCQA/pylint'>PyCQA/pylint<a></td>
+          <td class='red-glow'>644</td>
+          <td class='red-glow'>45</td>
+        </tr>
+      
+        <tr>
+          <td>64 </td>
+          <td><a href='https://github.com/spyder-ide/spyder'>spyder-ide/spyder<a></td>
+          <td class='red-glow'>1101</td>
+          <td class='red-glow'>62</td>
+        </tr>
+      
+        <tr>
+          <td>65 </td>
+          <td><a href='https://github.com/ipython/ipython'>ipython/ipython<a></td>
+          <td class='red-glow'>1460</td>
+          <td class='red-glow'>70</td>
+        </tr>
+      
+        <tr>
+          <td>66 </td>
+          <td><a href='https://github.com/scipy/scipy'>scipy/scipy<a></td>
+          <td class='red-glow'>1414</td>
+          <td class='red-glow'>285</td>
+        </tr>
+      
+        <tr>
+          <td>67 </td>
+          <td><a href='https://github.com/jupyter/notebook'>jupyter/notebook<a></td>
+          <td class='red-glow'>1992</td>
+          <td class='red-glow'>46</td>
+        </tr>
+      
+    </table>
+
+    <h3 id="oldest-closed-issue">Oldest Closed Issues</h3>
+
+    <p style="font-style: italic">
+      Participating repos with the oldest issues closed during Closember.
+    </p>
+
+    <p style="font-size: smaller;">
+      Note: Data for the oldest closed PR isn't reported here because it doesn't appear to be available in the GitHub API. If you figure out a way to get at this data, please <a href="https://github.com/openteamsinc/closember/issues/new">let us know</a>!
+
+      
+        (Also, this table is currently empty because there's no data yet!)
+      
+    </p>
+
+    <table class='c2'>
+      <tr>
+        <th>#</th>
+        <th>Repository</th>
+        <th>Closed After</th>
+        <th>Oldest issue closed</th>
+      </tr>
+      
+        <tr>
+          <td>&ndash;</td>
+          <td>&ndash;</td>
+          <td>&ndash;</td>
+          <td>&ndash;</td>
+        </tr>
+      
+      </table>
+
+
+
+
+
+    <footer class="footer"><section class="container">
+
+    <div style="text-align: center;"><strong>Footer</strong></div>
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    </section></footer>
+
+
+  </main>
 </body>
-
-
 </html>
-
