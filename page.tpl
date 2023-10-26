@@ -1,18 +1,18 @@
 <html>
 <head>
 
-<title>Closember 2022 by Quansight</title>
+<title>Closember {{YEAR}} by Quansight</title>
 <meta name="description" content="Closember aims to increase awareness about open source maintainer burnout and promote practices to make maintaining open source less stressful and more enjoyable for everyone.">
 
 <!-- Facebook Meta Tags -->
-<meta property="og:title" content="Closember 2022 by Quansight">
+<meta property="og:title" content="Closember {{YEAR}} by Quansight">
 <meta property="og:image" content="https://closember.org/assets/Closember_OG.png">
 <meta property="og:description" content="Closember aims to increase awareness about open source maintainer burnout and promote practices to make maintaining open source less stressful and more enjoyable for everyone.">
 <meta property="og:url" content="https://closember.org">
 
 <!-- Twitter Meta Tags -->
 <meta name="twitter:card" content="summary_large_image" >
-<meta name="twitter:title" content="Closember 2022 by Quansight">
+<meta name="twitter:title" content="Closember {{YEAR}} by Quansight">
 <meta property="twitter:domain" content="closember.org">
 <meta property="twitter:url" content="https://closember.org">
 <meta name="twitter:description" content="Closember aims to increase awareness about open source maintainer burnout and promote practices to make maintaining open source less stressful and more enjoyable for everyone.">
@@ -83,9 +83,11 @@
     </section></header>
 
     {% if ONGOING %}
-      <h2>Closember 2022 Is Live</h2>
+      <h2>Closember {{YEAR}} Is Live</h2>
+    {% elif RUNUP %}
+      <h2>Closember {{YEAR}} Is Almost Here</h2>
     {% else %}
-      <h2>Closember 2022 Is Over</h2>
+      <h2>Closember {{YEAR}} Is Over</h2>
     {% endif %}
 
     {% if ONGOING %}
@@ -175,6 +177,8 @@
       
       {% if ONGOING %}
         You could even take some extra time and triage/close a few issues or PRs yourself, if the mood strikes.
+      {% elif RUNUP %}
+        You could even take some extra time and triage/close a few issues or PRs yourself throughout November, if the mood strikes.
       {% endif %}
     </p>
 
@@ -262,6 +266,8 @@
       
       {% if ONGOING %}
         we’re calculating
+      {% if RUNUP %}
+        we'll be calculating
       {% else %}
         we calculate
       {% endif %}
@@ -287,7 +293,7 @@
       {% if ONGOING %}
         Closember,
       {% else %}
-        Closember 2022,
+        Closember {{YEAR}},
       {% endif %}
       
       <span class="green-glow">{{total_closed}}</span>

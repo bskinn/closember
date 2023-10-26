@@ -40,9 +40,16 @@ GCACHE = {}
 # in order to allow a day of stats to accumulate before
 # considering the event as having started.
 ONGOING: bool = (
-    datetime.datetime(YEAR, 11, 1, 0, 0)
+    datetime.datetime(YEAR, 11, 2, 0, 0)
     < datetime.datetime.now()
     < datetime.datetime(YEAR, 12, 1, 0, 0)
+)
+
+# Are we in the runup to a new year of Closember?
+RUNUP: bool = (
+  datetime.datetime(YEAR, 10, 1, 0, 0)
+  <= datetime.datetime.now()
+  <= datetime.datetime(YEAR, 11, 2, 0, 0)
 )
 
 # Datetime for use in GraphQL queries to mark start point
@@ -537,7 +544,9 @@ async def render():
         other=other,
         CUT_DATE=CUT_DATE,
         ONGOING=ONGOING,
+        RUNUP=RUNUP,
         NOW=datetime.datetime.utcnow().strftime("%d %b %Y %H:%M:%S UTC"),
+        YEAR=YEAR,
         sg_total=sg_total,
         top_sg=top_sg,
         svg=svg,
