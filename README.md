@@ -2,6 +2,9 @@
 
 See https://closember.org
 
+***NOTE:*** *I'm archiving this fork instead of deleting it as there are a few branches here
+with work that might be useful at some point in the future.*
+
 ## Build locally
 
 **Note:** Right now it's only possible to build the site on Linux.
